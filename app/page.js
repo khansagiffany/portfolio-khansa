@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download } from 'lucide-react';
+import { ChevronDown, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download, Code, Eye } from 'lucide-react';
+import { ReactTyped } from "react-typed";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Portfolio = () => {
     resume: "/resume.pdf"
   };
 
-    const experiences = [
+  const experiences = [
     {
       id: 1,
       company: "Telkom Indonesia",
@@ -49,6 +50,49 @@ const Portfolio = () => {
       description: "Built custom websites for small businesses and startups. Specialized in responsive design and modern web technologies.",
       logo: "https://cdn2.vectorstock.com/i/1000x1000/67/96/apartment-building-logo-design-inspiration-vector-29706796.jpg",
       skills: ["HTML", "CSS", "JavaScript", "PHP"]
+    }
+  ];
+
+  const projects = [
+    {
+      id: 1,
+      title: "EYECON - Eye Health Detection App",
+      description: "Android application that detects eye diseases using machine learning. Built with Kotlin and TensorFlow, featuring real-time image processing and comprehensive eye health analysis.",
+      image: "https://via.placeholder.com/400x250/800000/FFFFFF?text=EYECON+App",
+      technologies: ["Kotlin", "TensorFlow", "Android Studio", "Machine Learning"],
+      github: "https://github.com/khansagiffany/eyecon",
+      demo: "https://eyecon-demo.com",
+      year: "2024"
+    },
+    {
+      id: 2,
+      title: "SMARTGRO - IoT Agriculture System",
+      description: "IoT-based agriculture automation system that monitors soil conditions, weather, and automatically controls irrigation. Winner of Student Creativity Program (PKM) award.",
+      image: "https://via.placeholder.com/400x250/2D5A27/FFFFFF?text=SMARTGRO+IoT",
+      technologies: ["Arduino", "IoT", "Python", "React", "MySQL"],
+      github: "https://github.com/khansagiffany/smartgro",
+      demo: "https://smartgro-demo.com",
+      year: "2024"
+    },
+    {
+      id: 3,
+      title: "Company Website Portfolio",
+      description: "Modern responsive website for PT Artha Nusa Realty featuring property listings, company profile, and contact management system with admin dashboard.",
+      image: "https://via.placeholder.com/400x250/1E40AF/FFFFFF?text=Company+Website",
+      technologies: ["PHP", "Laravel", "MySQL", "Bootstrap", "JavaScript"],
+      github: "https://github.com/khansagiffany/company-website",
+      demo: "https://arthanusa-demo.com",
+      year: "2023"
+    },
+    {
+      id: 4,
+      title: "Data Analytics Dashboard",
+      description: "Interactive dashboard for statistical analysis and data visualization built during summer school program at Universitas Brawijaya using R and Shiny.",
+      image: "https://via.placeholder.com/400x250/7C2D12/FFFFFF?text=Analytics+Dashboard",
+      technologies: ["R", "Shiny", "ggplot2", "Statistics", "Data Analysis"],
+      github: "https://github.com/khansagiffany/data-dashboard",
+      demo: "https://analytics-demo.com",
+      year: "2024"
     }
   ];
 
@@ -82,13 +126,25 @@ const Portfolio = () => {
 
   const certificates = [
     { id: 1, title: "Intermediate Android Application Development", issuer: "Bangkit Academy by Google, GoTo, and Traveloka", year: "2025", image: "/img/Belajar Pengembangan Aplikasi Android Intermediate-images-0.jpg" },
-    { id: 2, title: "Machine Learning for Android", issuer: "Bangkit Academy by Google, GoTo, and Traveloka", year: "2025", image: "/img/public/img/Belajar Penerapan Machine Learning untuk Android-images-0.jpg" },
-    { id: 3, title: "Database", issuer: "Talent Scouting Academy", year: "2024", image: "/img/public/img/Sertifikat_KHANSA PUTRI GIFFANY_Database Design & Database Programming with SQL.jpg" },
+    { id: 2, title: "Machine Learning for Android", issuer: "Bangkit Academy by Google, GoTo, and Traveloka", year: "2025", image: "img/ML.jpeg" },
+    { id: 3, title: "Database Design & Programming", issuer: "TSA by Komdigi", year: "2024", image: "/img/DB.jpeg" },
   ];
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  const handleViewDetails = (expId) => {
+    console.log('View experience details:', expId);
+  };
+
+  const handleViewEducationDetails = (eduId) => {
+    console.log('View education details:', eduId);
+  };
+
+  const handleViewProject = (projectId) => {
+    console.log('View project:', projectId);
   };
 
   return (
@@ -101,13 +157,14 @@ const Portfolio = () => {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('about')} className="text-stone-600 hover:text-amber-700 transition-colors">About</button>
-              <button onClick={() => scrollToSection('experience')} className="text-stone-600 hover:text-amber-700 transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('education')} className="text-stone-600 hover:text-amber-700 transition-colors">Education</button>
-              <button onClick={() => scrollToSection('certificates')} className="text-stone-600 hover:text-amber-700 transition-colors">Certificates</button>
-              <button onClick={() => scrollToSection('contact')} className="text-stone-600 hover:text-amber-700 transition-colors">Contact</button>
+              <button onClick={() => scrollToSection('about')} className="text-stone-600 hover:text-[#800000] transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="text-stone-600 hover:text-[#800000] transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('projects')} className="text-stone-600 hover:text-[#800000] transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('education')} className="text-stone-600 hover:text-[#800000] transition-colors">Education</button>
+              <button onClick={() => scrollToSection('certificates')} className="text-stone-600 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('contact')} className="text-stone-600 hover:text-[#800000] transition-colors">Contact</button>
             </div>
-
+  
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -116,41 +173,67 @@ const Portfolio = () => {
               <ChevronDown className={`w-6 h-6 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
             </button>
           </div>
-
+  
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
-              <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-stone-600 hover:text-amber-700 transition-colors">About</button>
-              <button onClick={() => scrollToSection('experience')} className="block w-full text-left py-2 text-stone-600 hover:text-amber-700 transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('education')} className="block w-full text-left py-2 text-stone-600 hover:text-amber-700 transition-colors">Education</button>
-              <button onClick={() => scrollToSection('certificates')} className="block w-full text-left py-2 text-stone-600 hover:text-amber-700 transition-colors">Certificates</button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-stone-600 hover:text-amber-700 transition-colors">Contact</button>
+              <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('education')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Education</button>
+              <button onClick={() => scrollToSection('certificates')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Contact</button>
             </div>
           )}
         </div>
       </nav>
-
+  
       {/* Hero Section */}
       <section id="hero" className="pt-24 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-12 items-center">
+            
+            {/* Left Content - Photo */}
+            <div className="flex justify-center lg:justify-center">
+              <div className="relative">
+                <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl bg-gradient-to-br from-[#800000]/20 to-rose-200 p-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                  <div className="w-full h-full rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/img/khansagiffany.jpg"
+                    alt={profile.name}
+                    className="w-full h-full object-cover"
+                  />
+                  </div>
+                </div>
+                
+                {/* Floating decoration */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#800000] rounded-full animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-rose-600 rounded-full animate-pulse"></div>
+              </div>
+            </div>
+
+            {/* Right Content - Text */}
+            <div className="space-y-6 pr-6 lg:pr-12 max-w-2xl">
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center space-x-2 bg-[#800000]/10 text-[#800000] px-3 py-1 rounded-full text-sm font-medium">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span>Available for work</span>
                 </div>
                 
                 <h1 className="text-4xl lg:text-6xl font-bold text-stone-800 leading-tight">
-                  Hi, I'm{' '}
-                  <span className="text-transparent bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text">
+                  Hi, I am <span className="text-transparent bg-gradient-to-r from-[#800000] to-rose-700 bg-clip-text">
                     {profile.name}
                   </span>
                 </h1>
-                
+
                 <h2 className="text-xl lg:text-2xl text-stone-600 font-light">
-                  {profile.title}
+                  <ReactTyped
+                    strings={["Fullstack Developer", "AI Engineer"]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                    backDelay={1500}
+                    loop
+                  />
                 </h2>
                 
                 <p className="text-lg text-stone-600 leading-relaxed">
@@ -166,7 +249,7 @@ const Portfolio = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href={profile.resume}
-                  className="inline-flex items-center justify-center space-x-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
+                  className="inline-flex items-center justify-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
                 >
                   <Download className="w-5 h-5" />
                   <span>Download CV</span>
@@ -174,80 +257,60 @@ const Portfolio = () => {
                 
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="inline-flex items-center justify-center space-x-2 border-2 border-stone-300 hover:border-amber-600 text-stone-600 hover:text-amber-600 px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
+                  className="inline-flex items-center justify-center space-x-2 border-2 border-stone-300 hover:border-[#800000] text-stone-600 hover:text-[#800000] px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
                 >
                   <Mail className="w-5 h-5" />
                   <span>Contact Me</span>
                 </button>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <a href={profile.linkedin} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
-                  <Linkedin className="w-6 h-6 text-stone-600 hover:text-blue-600" />
-                </a>
-                <a href={profile.github} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
-                  <Github className="w-6 h-6 text-stone-600 hover:text-stone-800" />
-                </a>
-              </div>
-            </div>
-
-            {/* Right Content - Photo */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl bg-gradient-to-br from-amber-200 to-orange-200 p-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                  <div className="w-full h-full rounded-xl bg-white flex items-center justify-center overflow-hidden">
-                    <img 
-                      src="https://via.placeholder.com/320x320/8B7355/FFFFFF?text=Your+Photo"
-                      alt={profile.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <div className="flex items-center space-x-4">
+                  <a href={profile.linkedin} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
+                    <Linkedin className="w-6 h-6 text-stone-600 hover:text-blue-600" />
+                  </a>
+                  <a href={profile.github} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
+                    <Github className="w-6 h-6 text-stone-600 hover:text-stone-800" />
+                  </a>
                 </div>
-                
-                {/* Floating decoration */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-amber-400 rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-orange-400 rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+  
       {/* About Section */}
       <section id="about" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let's get to know Khansa!</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-stone-600 leading-relaxed text-justify">
                 Khansa Putri Giffany is a Fullstack Developer at Telkom Indonesia, specializing in AI chatbot development for
-internal use. A fourth year Informatics Engineering student at Universitas Mercu Buana, she previously led the
-EYECON eye health app project at Bangkit Academy, graduating with distinction.
+  internal use. A fourth year Informatics Engineering student at Universitas Mercu Buana, she previously led the
+  EYECON eye health app project at Bangkit Academy, graduating with distinction.
               </p>
               
               <p className="text-lg text-stone-600 leading-relaxed text-justify">
                With expertise in project
-management, software development, and AI integration, Khansa thrives in fast-paced corporate environments. Her
-ability to adapt quickly and collaborate effectively makes her a valuable asset in dynamic teams, driving innovation
-and efficiency
+  management, software development, and AI integration, Khansa thrives in fast-paced corporate environments. Her
+  ability to adapt quickly and collaborate effectively makes her a valuable asset in dynamic teams, driving innovation
+  and efficiency
               </p>
-
+  
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="text-center p-4 bg-stone-50 rounded-lg">
-                  <div className="text-2xl font-bold text-amber-600">2+</div>
+                  <div className="text-2xl font-bold text-[#800000]">2+</div>
                   <div className="text-stone-600">Years Experience</div>
                 </div>
                 <div className="text-center p-4 bg-stone-50 rounded-lg">
-                  <div className="text-2xl font-bold text-amber-600">30+</div>
+                  <div className="text-2xl font-bold text-[#800000]">30+</div>
                   <div className="text-stone-600">Projects Completed</div>
                 </div>
               </div>
             </div>
-
+  
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-stone-800 mb-4">Skills & Technologies</h3>
               <div className="space-y-4">
@@ -275,7 +338,7 @@ and efficiency
                       {skillGroup.skills.map((skill, skillIndex) => (
                         <span 
                           key={skillIndex}
-                          className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-[#800000]/10 text-[#800000] rounded-full text-sm font-medium"
                         >
                           {skill}
                         </span>
@@ -287,14 +350,14 @@ and efficiency
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
       {/* Experience Section */}
       <section id="experience" className="py-16 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Work Experience</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
           </div>
 
           <div className="space-y-8">
@@ -316,7 +379,7 @@ and efficiency
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                       <div>
                         <h3 className="text-xl font-semibold text-stone-800">{exp.position}</h3>
-                        <p className="text-amber-600 font-medium">{exp.company}</p>
+                        <p className="text-[#800000] font-medium">{exp.company}</p>
                       </div>
                       <div className="flex flex-col lg:items-end text-sm text-stone-500">
                         <div className="flex items-center space-x-1">
@@ -347,7 +410,7 @@ and efficiency
                 
                 {/* Button di pojok kanan bawah */}
                 <button 
-                  className="absolute bottom-4 right-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
                   onClick={() => handleViewDetails(exp.id)}
                 >
                   <span>View Details</span>
@@ -361,12 +424,97 @@ and efficiency
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Featured Projects</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {projects.slice(0, 4).map((project) => (
+              <div 
+                key={project.id} 
+                className="bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] relative group"
+              >
+                <div className="relative">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="flex space-x-2">
+                      <a 
+                        href={project.github}
+                        className="p-2 bg-white rounded-full hover:bg-stone-100 transition-colors"
+                        title="View Code"
+                      >
+                        <Github className="w-5 h-5 text-stone-800" />
+                      </a>
+                      <a 
+                        href={project.demo}
+                        className="p-2 bg-white rounded-full hover:bg-stone-100 transition-colors"
+                        title="Live Demo"
+                      >
+                        <ExternalLink className="w-5 h-5 text-stone-800" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 pb-12">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-stone-800">{project.title}</h3>
+                    <span className="text-sm text-stone-500">{project.year}</span>
+                  </div>
+                  <p className="text-stone-600 text-sm mb-3 leading-relaxed">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.slice(0, 3).map((tech, index) => (
+                      <span 
+                        key={index}
+                        className="px-2 py-1 bg-[#800000]/10 text-[#800000] rounded text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="px-2 py-1 bg-stone-200 text-stone-600 rounded text-xs font-medium">
+                        +{project.technologies.length - 3} more
+                      </span>
+                    )}
+                  </div>
+                </div>
+                
+                {/* View Details button */}
+                <button 
+                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  onClick={() => handleViewProject(project.id)}
+                >
+                  <Eye className="w-3 h-3" />
+                  <span>View Details</span>
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+              <Code className="w-5 h-5" />
+              <span>View More Projects</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Education Section */}
       <section id="education" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Education</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -383,7 +531,7 @@ and efficiency
                   />
                   <div className="flex-grow pb-12">
                     <h3 className="text-lg font-semibold text-stone-800">{edu.degree}</h3>
-                    <p className="text-amber-600 font-medium mb-2">{edu.institution}</p>
+                    <p className="text-[#800000] font-medium mb-2">{edu.institution}</p>
                     <div className="flex items-center justify-between text-sm text-stone-600 mb-4">
                       <span>{edu.duration}</span>
                       <span className="font-medium">GPA: {edu.gpa}</span>
@@ -395,7 +543,7 @@ and efficiency
                       <ul className="space-y-1">
                         {edu.activities.map((activity, index) => (
                           <li key={index} className="text-xs text-stone-600 flex items-start">
-                            <span className="w-1 h-1 bg-amber-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span className="w-1 h-1 bg-[#800000] rounded-full mt-2 mr-2 flex-shrink-0"></span>
                             <span>{activity}</span>
                           </li>
                         ))}
@@ -406,7 +554,7 @@ and efficiency
                 
                 {/* Button View Details di pojok kanan bawah */}
                 <button 
-                  className="absolute bottom-4 right-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
                   onClick={() => handleViewEducationDetails(edu.id)}
                 >
                   <span>View Details</span>
@@ -425,7 +573,7 @@ and efficiency
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Certificates</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -446,7 +594,7 @@ and efficiency
           </div>
 
           <div className="text-center">
-            <button className="inline-flex items-center space-x-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+            <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
               <Award className="w-5 h-5" />
               <span>View All Certificates</span>
             </button>
@@ -459,7 +607,7 @@ and efficiency
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let's Work Together</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mb-6"></div>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               I'm always interested in new opportunities and exciting projects. 
               Let's discuss how we can bring your ideas to life.
@@ -471,7 +619,7 @@ and efficiency
               href={`mailto:${profile.email}`}
               className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <Mail className="w-8 h-8 text-amber-600 mb-3" />
+              <Mail className="w-8 h-8 text-[#800000] mb-3" />
               <h3 className="font-semibold text-stone-800 mb-1">Email</h3>
               <p className="text-stone-600">{profile.email}</p>
             </a>
@@ -480,7 +628,7 @@ and efficiency
               href={`tel:${profile.phone}`}
               className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <Phone className="w-8 h-8 text-amber-600 mb-3" />
+              <Phone className="w-8 h-8 text-[#800000] mb-3" />
               <h3 className="font-semibold text-stone-800 mb-1">Phone</h3>
               <p className="text-stone-600">{profile.phone}</p>
             </a>
@@ -489,7 +637,7 @@ and efficiency
               href={profile.linkedin}
               className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <Linkedin className="w-8 h-8 text-amber-600 mb-3" />
+              <Linkedin className="w-8 h-8 text-[#800000] mb-3" />
               <h3 className="font-semibold text-stone-800 mb-1">LinkedIn</h3>
               <p className="text-stone-600">Connect with me</p>
             </a>
