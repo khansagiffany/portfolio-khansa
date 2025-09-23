@@ -56,33 +56,33 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "EYECON - Eye Health Detection App",
-      description: "Android application that detects eye diseases using machine learning. Built with Kotlin and TensorFlow, featuring real-time image processing and comprehensive eye health analysis.",
-      image: "https://via.placeholder.com/400x250/800000/FFFFFF?text=EYECON+App",
-      technologies: ["Kotlin", "TensorFlow", "Android Studio", "Machine Learning"],
-      github: "https://github.com/khansagiffany/eyecon",
-      demo: "https://eyecon-demo.com",
-      year: "2024"
+      title: "CIAMIC - Chat Intelligent Assistant for Media Interaction & Communication",
+      description: "AI-powered chatbot for TelkomGroup employees to access internal product information, HR resources, KPIs, and secure company data. Improved adoption by 64% through user research and continuous iteration. Built for both desktop and mobile with responsive design.",
+      image: "/img/ciamic.png",
+      technologies: ["React.js", "Laravel", "MongoDB", "Docker", "Postman"],
+      github: "https://github.com/khansagiffany/ciamic", 
+      demo: "https://ciamic-trf.itdri.id/", 
+      year: "2025"
     },
     {
       id: 2,
-      title: "SMARTGRO - IoT Agriculture System",
-      description: "IoT-based agriculture automation system that monitors soil conditions, weather, and automatically controls irrigation. Winner of Student Creativity Program (PKM) award.",
-      image: "https://via.placeholder.com/400x250/2D5A27/FFFFFF?text=SMARTGRO+IoT",
-      technologies: ["Arduino", "IoT", "Python", "React", "MySQL"],
-      github: "https://github.com/khansagiffany/smartgro",
-      demo: "https://smartgro-demo.com",
-      year: "2024"
+      title: "Digimate - Personal Tracker for Interns",
+      description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management.",
+      image: "/img/digimate.jpg",
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Gemini"],
+      github: "https://github.com/khansagiffany/digimate-v2",
+      demo: "https://digimate-v2.vercel.app",
+      year: "2025"
     },
     {
       id: 3,
-      title: "Company Website Portfolio",
-      description: "Modern responsive website for PT Artha Nusa Realty featuring property listings, company profile, and contact management system with admin dashboard.",
-      image: "https://via.placeholder.com/400x250/1E40AF/FFFFFF?text=Company+Website",
-      technologies: ["PHP", "Laravel", "MySQL", "Bootstrap", "JavaScript"],
-      github: "https://github.com/khansagiffany/company-website",
-      demo: "https://arthanusa-demo.com",
-      year: "2023"
+      title: "EYECON - Eye Health Mobile App",
+      description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
+      image: "/img/eyecon.jpg",
+      technologies: ["Kotlin", "TensorFlow", "Android Studio", "Machine Learning", "API Integration"],
+      github: "https://github.com/EYECON-Capstone",
+      demo: "https://eyecon-demo.com",
+      year: "2024"
     },
     {
       id: 4,
