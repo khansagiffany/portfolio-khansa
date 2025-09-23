@@ -3,15 +3,17 @@
 import React, { useState } from 'react';
 import { ChevronDown, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download, Code, Eye } from 'lucide-react';
 import { ReactTyped } from "react-typed";
+import { useRouter } from 'next/navigation';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   // Sample data - nanti bisa dipindah ke src/data/
   const profile = {
     name: "Khansa Putri Giffany",
     title: "Frontend Developer",
-    description: "Passionate about creating beautiful and functional web experiences. I love turning complex problems into simple, intuitive designs.",
+    description: "Always exploring tech, design, and innovation to create meaningful experiences, from AI-driven solutions to user-friendly web and mobile apps. Staying curious about how technology can make life easier.",
     location: "Jakarta, Indonesia",
     email: "khansaagiffany@gmail.com",
     phone: "+6288972910997",
@@ -29,7 +31,7 @@ const Portfolio = () => {
       location: "Telkom Landmark Tower, Jakarta",
       description: "Developed AI chatbots for internal use, handling both frontend and backend tasks using React, Next.js, and TypeScript. Collaborated with cross-functional teams to improve automation and internal workflows.",
       logo: "https://www.telkom.co.id/minio/show/data/image_upload/page/1594112895830_compress_PNG%20Icon%20Telkom.png",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "AI Chatbot Development"]
+      skills: ["React.js", "Laravel", "Python", "MongoDB", "Docker", "Postman", "Git", "CI/CD", "AI Chatbot Development"]
     },
     {
       id: 2,
@@ -39,7 +41,7 @@ const Portfolio = () => {
       location: "Jakarta, Indonesia",
       description: "Built Android apps using Kotlin, integrated with ML models and APIs. Completed over 900 hours of learning and consistently earned 5-star ratings. Achieved Android Developer Expert certification after advanced training.",
       logo: "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=2147483647&v=beta&t=oWNWz9O6b8rrBzaHIYm0P8JDa0hYPcNOJcPJMa_jpcY",
-      skills: ["Kotlin", "Android Studio", "Machine Learning", "API Integration"]
+      skills: ["Kotlin", "Android Studio", "Machine Learning", "Firebase", "API Integration"]
     },
     {
       id: 3,
@@ -135,8 +137,21 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
 
-  const handleViewDetails = (expId) => {
-    console.log('View experience details:', expId);
+  // Handler untuk navigasi ke halaman detail berdasarkan ID
+  const handleViewDetails = (experienceId) => {
+    switch(experienceId) {
+      case 1: // Telkom Indonesia
+        router.push('/experiences/telkom');
+        break;
+      case 2: // Bangkit Academy  
+        router.push('/experiences/bangkit');
+        break;
+      case 3: // Artha Nusa
+        router.push('/experiences/artha-nusa');
+        break;
+      default:
+        console.log('Experience detail page not found');
+    }
   };
 
   const handleViewEducationDetails = (eduId) => {
@@ -305,7 +320,7 @@ const Portfolio = () => {
                   <div className="text-stone-600">Years Experience</div>
                 </div>
                 <div className="text-center p-4 bg-stone-50 rounded-lg">
-                  <div className="text-2xl font-bold text-[#800000]">30+</div>
+                  <div className="text-2xl font-bold text-[#800000]">25+</div>
                   <div className="text-stone-600">Projects Completed</div>
                 </div>
               </div>
@@ -510,7 +525,7 @@ const Portfolio = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-16 px-6 bg-white">
+      <section id="education" className="py-16 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Education</h2>
@@ -569,7 +584,7 @@ const Portfolio = () => {
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-16 px-6 bg-stone-50">
+      <section id="certificates" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Certificates</h2>
@@ -603,7 +618,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-6 bg-white">
+      <section id="contact" className="py-16 px-6  bg-stone-50">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let's Work Together</h2>
