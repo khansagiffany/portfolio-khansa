@@ -18,10 +18,10 @@ const UBEducationDetail = () => {
     {
       semester: "Summer 2024",
       courses: [
-        { code: "STAT101", name: "Introduction to Statistics", credits: 3, grade: "A-", points: 3.7 },
-        { code: "STAT201", name: "Statistical Analysis with R", credits: 3, grade: "A", points: 4.0 },
-        { code: "STAT202", name: "Data Visualization", credits: 3, grade: "B+", points: 3.3 },
-        { code: "STAT301", name: "Applied Statistics", credits: 3, grade: "A-", points: 3.7 },
+        { code: "MAD62115", name: "Data Visualization Techniques", credits: 3, grade: "C+", points: 2.5 },
+        { code: "MAD62122", name: "Data Science Methods", credits: 3, grade: "A", points: 4.0 },
+        { code: "MAS61139", name: "Data Minin", credits: 3, grade: "A", points: 4.0 },
+        { code: "MAS62137", name: "Artificial Neural Network Models", credits: 3, grade: "A", points: 4.0 },
       ]
     }
   ];
@@ -92,7 +92,7 @@ const UBEducationDetail = () => {
             </button>
             <div className="flex items-center gap-4">
               <a 
-                href="/documents/transcript-ub.pdf"
+                href="https://drive.google.com/file/d/1y-kcs1NlLJ0LXPDo0cbl6t4R5IKvw6Rn/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"

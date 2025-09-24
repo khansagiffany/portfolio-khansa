@@ -10,12 +10,12 @@ const DigimateDetail = () => {
   
   // Sample images - replace with actual Digimate screenshots
   const projectImages = [
-    '/img/digimate-1.png',
-    '/img/digimate-2.png', 
-    '/img/digimate-3.png',
-    '/img/digimate-4.png',
-    '/img/digimate-5.png',
-    '/img/digimate-6.png'
+    '/img/D1.png',
+    '/img/D2.png', 
+    '/img/D3.png',
+    '/img/D4.png',
+    '/img/D5.png',
+    '/img/D6.png'
   ];
 
   const nextSlide = () => {

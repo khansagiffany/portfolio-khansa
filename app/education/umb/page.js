@@ -14,40 +14,62 @@ const EducationDetail = () => {
 
   // Sample transcript data
   const transcriptData = [
-    { semester: 1, courses: [
-      { code: "INF101", name: "Introduction to Programming", credits: 3, grade: "A", points: 4.0 },
-      { code: "MAT101", name: "Calculus I", credits: 3, grade: "A", points: 4.0 },
-      { code: "ENG101", name: "English I", credits: 2, grade: "A-", points: 3.7 },
-      { code: "PHY101", name: "Physics I", credits: 3, grade: "A", points: 4.0 },
-    ]},
-    { semester: 2, courses: [
-      { code: "INF102", name: "Data Structures", credits: 3, grade: "A", points: 4.0 },
-      { code: "MAT102", name: "Calculus II", credits: 3, grade: "A-", points: 3.7 },
-      { code: "INF103", name: "Database Systems", credits: 3, grade: "A", points: 4.0 },
-      { code: "STA101", name: "Statistics", credits: 3, grade: "A", points: 4.0 },
-    ]},
-    { semester: 3, courses: [
-      { code: "INF201", name: "Web Development", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF202", name: "Software Engineering", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF203", name: "Computer Networks", credits: 3, grade: "A-", points: 3.7 },
-      { code: "MAT201", name: "Discrete Mathematics", credits: 3, grade: "A", points: 4.0 },
-    ]},
-    { semester: 4, courses: [
-      { code: "INF301", name: "Machine Learning", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF302", name: "Mobile Development", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF303", name: "Algorithms Analysis", credits: 3, grade: "A", points: 4.0 },
-      { code: "MGT101", name: "Project Management", credits: 2, grade: "A-", points: 3.7 },
-    ]},
-    { semester: 5, courses: [
-      { code: "INF401", name: "Artificial Intelligence", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF402", name: "Cloud Computing", credits: 3, grade: "A", points: 4.0 },
-      { code: "INF403", name: "Cybersecurity", credits: 3, grade: "A-", points: 3.7 },
-    ]},
-    { semester: 6, courses: [
-      { code: "INF501", name: "Capstone Project I", credits: 4, grade: "A", points: 4.0 },
-      { code: "INF502", name: "Research Methodology", credits: 2, grade: "A", points: 4.0 },
-    ]},
-  ];
+      { semester: 1, courses: [
+          { code: "F062100001", name: "Computer Security Fundamentals", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "F062100002", name: "Statistics and Probability", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "U002100001", name: "Islamic Religious Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+          { code: "U002100014", name: "English I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+          { code: "W152100001", name: "Calculus", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100002", name: "Algorithms and Programming", credits: 3, grade: "B", points: 3.00, total: 9.00 },
+          { code: "W152100003", name: "Database Systems", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+      ]},
+      { semester: 2, courses: [
+          { code: "U002100007", name: "Pancasila", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
+          { code: "U002100015", name: "English II", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+          { code: "W152100004", name: "Discrete Mathematics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100006", name: "Data Structures", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100007", name: "Algorithm and Data Structures Lab", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100008", name: "Computer Architecture", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+          { code: "W152100009", name: "CCNA R&S 1", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      ]},
+      { semester: 3, courses: [
+          { code: "F062100004", name: "Software Engineering", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "F062100006", name: "PL/SQL Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110001", name: "Advanced Algorithms", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110002", name: "Introduction to Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100005", name: "Professional Communication and Ethics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100010", name: "Linear Algebra", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+          { code: "W152100011", name: "Operating Systems", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100012", name: "Introduction to Artificial Intelligence", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      ]},
+      { semester: 4, courses: [
+          { code: "F062100003", name: "Object-Oriented Analysis", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110010", name: "2D/3D Modeling", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110011", name: "Image Processing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "U002100008", name: "Civics", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
+          { code: "U002100010", name: "Anti-Corruption and Ethics Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+          { code: "W152100016", name: "Mobile Programming", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+          { code: "W152100023", name: "Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "W152100026", name: "Cloud Computing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      ]},
+      { semester: 5, courses: [
+          { code: "M062100017", name: "Natural Language Processing (NLP)", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "M062100053", name: "Mathematical Tools for Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "M062100066", name: "Object-Oriented Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "M062100067", name: "Introduction to Data Mining", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "M062100087", name: "Human-Computer Interaction", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "M062100088", name: "Enterprise Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "U002100009", name: "Indonesian Language", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+          { code: "U002100011", name: "Entrepreneurship I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      ]},
+      { semester: 6, courses: [
+          { code: "F062100007", name: "English for Computer I", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110005", name: "Machine Learning", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+          { code: "P152110006", name: "Advanced Data Mining", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+          { code: "P152110008", name: "Smart Web Programming", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+          { code: "W152100020", name: "Internship", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+      ]},
+    ];
 
   const activities = [
     {
@@ -65,7 +87,7 @@ const EducationDetail = () => {
       year: "2025"
     },
     {
-      title: "SMARTGRO - IoT-Based Agriculture Automation",
+      title: "SMARTGRO: IoT - Based Agriculture Automation",
       description: "Developed an innovative Student Creativity Program (PKM) focusing on IoT-based agriculture automation system. The project aims to optimize crop management through smart sensors and automated irrigation systems.",
       icon: <Lightbulb className="text-green-500" size={24} />,
       category: "Research",
@@ -77,7 +99,7 @@ const EducationDetail = () => {
     { label: "Current GPA", value: "3.90/4.00", color: "text-green-600" },
     { label: "Major", value: "Informatics Engineering", color: "text-blue-600" },
     { label: "Expected Graduation", value: "2026", color: "text-purple-600" },
-    { label: "Total Credits", value: "144+ Credits", color: "text-orange-600" }
+    { label: "Total Credits", value: "138 Credits", color: "text-orange-600" }
   ];
 
   const skills = [
@@ -115,7 +137,7 @@ const EducationDetail = () => {
             </button>
             <div className="flex items-center gap-4">
               <a 
-                href="/documents/transcript-umb.pdf"
+                href="https://bit.ly/TRANSKRIP_KhansaPG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
