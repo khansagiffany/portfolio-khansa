@@ -207,7 +207,7 @@ const EducationDetail = () => {
               <section>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Program Overview</h2>
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  Currently pursuing a Bachelor's degree in Informatics Engineering at Universitas Mercu Buana, one of the leading private universities in Indonesia. The program focuses on comprehensive software engineering, data science, and emerging technologies in computer science.
+                  Currently pursuing a Bachelors degree in Informatics Engineering at Universitas Mercu Buana, one of the leading private universities in Indonesia. The program focuses on comprehensive software engineering, data science, and emerging technologies in computer science.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
                   Maintaining an exceptional GPA of 3.90/4.00 while actively participating in various academic and research activities. Expected to graduate in 2026 with strong foundations in both theoretical computer science and practical software development.

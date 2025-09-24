@@ -185,7 +185,7 @@ const UBEducationDetail = () => {
               <section>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Summer School Programme</h2>
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  Participated in an intensive Summer School Programme in Statistics at Universitas Brawijaya, one of Indonesia's premier public universities. This accelerated program provided comprehensive exposure to statistical methods, data analysis techniques, and hands-on experience with statistical software.
+                  Participated in an intensive Summer School Programme in Statistics at Universitas Brawijaya, one of Indonesia premier public universities. This accelerated program provided comprehensive exposure to statistical methods, data analysis techniques, and hands-on experience with statistical software.
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-6">
                   The program focused on practical applications of statistical concepts using R Studio, covering everything from basic descriptive statistics to advanced statistical modeling. Achieved a GPA of 3.63/4.00 while completing 12 credits that can be converted to the home institution.

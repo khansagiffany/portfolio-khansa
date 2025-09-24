@@ -318,7 +318,8 @@ const Portfolio = () => {
       <section id="about" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let's get to know Khansa!</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
+            Let&apos;s get to know Khansa!</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
           </div>
           
@@ -644,11 +645,11 @@ const Portfolio = () => {
       <section id="contact" className="py-16 px-6  bg-stone-50">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let's Work Together</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let&apos;s Work Together</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mb-6"></div>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              I'm always interested in new opportunities and exciting projects. 
-              Let's discuss how we can bring your ideas to life.
+              I&apos;m always interested in new opportunities and exciting projects. 
+              Let&apos;s discuss how we can bring your ideas to life.
             </p>
           </div>
 

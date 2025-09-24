@@ -278,11 +278,11 @@ const EyeconDetail = () => {
               <div className="space-y-4">
                 <div className="border-l-4 border-orange-500 pl-4">
                   <h3 className="font-semibold text-slate-900 mb-2">Kotlin Development</h3>
-                  <p className="text-slate-700">Leveraged Kotlin's modern features for robust Android development with null safety, coroutines for async operations, and clean architecture patterns.</p>
+                  <p className="text-slate-700">Leveraged Kotlins modern features for robust Android development with null safety, coroutines for async operations, and clean architecture patterns.</p>
                 </div>
                 <div className="border-l-4 border-green-500 pl-4">
                   <h3 className="font-semibold text-slate-900 mb-2">Android Studio Integration</h3>
-                  <p className="text-slate-700">Utilized Android Studio's comprehensive development environment with advanced debugging tools, UI designer, and performance profilers.</p>
+                  <p className="text-slate-700">Utilized Android Studios comprehensive development environment with advanced debugging tools, UI designer, and performance profilers.</p>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h3 className="font-semibold text-slate-900 mb-2">Machine Learning Model</h3>
