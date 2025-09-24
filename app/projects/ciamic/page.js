@@ -66,14 +66,6 @@ const CiamicDetail = () => {
             </button>
             <div className="flex items-center gap-4">
               <a 
-                href="https://github.com/khansagiffany/ciamic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a 
                 href="https://ciamic-trf.itdri.id/"
                 target="_blank"
                 rel="noopener noreferrer"
