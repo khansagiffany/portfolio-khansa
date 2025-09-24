@@ -46,12 +46,12 @@ const Portfolio = () => {
     {
       id: 3,
       company: "PT Artha Nusa Realty",
-      position: "Web & Data Developer",
+      position: "Data Administrator",
       duration: "2022 - 2025",
       location: "Jakarta, Indonesia",
-      description: "Built custom websites for small businesses and startups. Specialized in responsive design and modern web technologies.",
+      description: "Managed customer data cleaning and validation processes, created property contracts and agreements, and maintained accurate database records for real estate transactions with 75% data accuracy improvement.",
       logo: "https://cdn2.vectorstock.com/i/1000x1000/67/96/apartment-building-logo-design-inspiration-vector-29706796.jpg",
-      skills: ["HTML", "CSS", "JavaScript", "PHP"]
+      skills: ["Microsoft Excel", "Data Entry", "Database Management", "Contract Management"]
     }
   ];
 
@@ -61,7 +61,7 @@ const Portfolio = () => {
       title: "CIAMIC - Chat Intelligent Assistant for Media Interaction & Communication",
       description: "AI-powered chatbot for TelkomGroup employees to access internal product information, HR resources, KPIs, and secure company data. Improved adoption by 64% through user research and continuous iteration. Built for both desktop and mobile with responsive design.",
       image: "/img/ciamic.png",
-      technologies: ["React.js", "Laravel", "MongoDB", "Docker", "Postman"],
+      technologies: ["React.js", "Laravel", "MongoDB"],
       github: "https://github.com/khansagiffany/ciamic", 
       demo: "https://ciamic-trf.itdri.id/", 
       year: "2025"
@@ -71,7 +71,7 @@ const Portfolio = () => {
       title: "Digimate - Personal Tracker for Interns",
       description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management.",
       image: "/img/digimate.jpg",
-      technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Gemini"],
+      technologies: ["Next.js", "Tailwind", "Gemini"],
       github: "https://github.com/khansagiffany/digimate-v2",
       demo: "https://digimate-v2.vercel.app",
       year: "2025"
@@ -81,7 +81,7 @@ const Portfolio = () => {
       title: "EYECON - Eye Health Mobile App",
       description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
       image: "/img/eyecon.jpg",
-      technologies: ["Kotlin", "TensorFlow", "Android Studio", "Machine Learning", "API Integration"],
+      technologies: ["Kotlin", "Android Studio", "ML"],
       github: "https://github.com/EYECON-Capstone",
       demo: "https://eyecon-demo.com",
       year: "2024"
@@ -149,17 +149,40 @@ const Portfolio = () => {
       case 3: // Artha Nusa
         router.push('/experiences/artha-nusa');
         break;
+      case 4:
+        router.push('/experiences/telkom');
       default:
         console.log('Experience detail page not found');
     }
   };
 
   const handleViewEducationDetails = (eduId) => {
-    console.log('View education details:', eduId);
+    switch(eduId) {
+      case 1: //umb
+        router.push('/education/umb');
+        break;
+      case 2: //ub
+        router.push('/education/ub');
+        break;
+      default:
+          console.log('Experience detail page not found');
+    }
   };
 
   const handleViewProject = (projectId) => {
-    console.log('View project:', projectId);
+    switch(projectId) {
+      case 1: //ciamic
+        router.push('/projects/ciamic');
+        break;
+      case 2: //digimate
+        router.push('/projects/digimate');
+        break;
+      case 3: //eyecon
+        router.push('/projects/eyecon');
+        break;
+      default:
+        console.log('Projects detail page not found');
+    }
   };
 
   return (

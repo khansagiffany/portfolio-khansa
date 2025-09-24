@@ -173,7 +173,7 @@ export default function BangkitExperiencePage() {
             <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6">Program Overview</h2>
               <p className="text-stone-600 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
-                Participated in Bangkit Academy's intensive Mobile Development program, a collaboration between Google, GoTo, and Traveloka. Mastered Android development with Kotlin, machine learning integration, and led a successful capstone project while maintaining perfect ratings throughout the program.
+                Participated in Bangkit Academy intensive Mobile Development program, a collaboration between Google, GoTo, and Traveloka. Mastered Android development with Kotlin, machine learning integration, and led a successful capstone project while maintaining perfect ratings throughout the program.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">

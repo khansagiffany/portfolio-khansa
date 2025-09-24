@@ -191,7 +191,7 @@ export default function TelkomExperiencePage() {
             <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6">About Telkom Indonesia</h2>
               <p className="text-stone-600 leading-relaxed mb-4 text-sm sm:text-base">
-                Telkom Indonesia is the largest telecommunications and digital services company in Indonesia. As a state-owned enterprise, Telkom serves millions of customers across the archipelago, providing innovative digital solutions and maintaining Indonesia's digital infrastructure.
+                Telkom Indonesia is the largest telecommunications and digital services company in Indonesia. As a state-owned enterprise, Telkom serves millions of customers across the archipelago, providing innovative digital solutions and maintaining Indonesia digital infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-stone-500 space-y-1 sm:space-y-0">
                 <span>• Founded: 1884</span>
