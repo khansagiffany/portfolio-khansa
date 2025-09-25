@@ -19,7 +19,7 @@ const Portfolio = () => {
     phone: "+6288972910997",
     linkedin: "https://www.linkedin.com/in/khansa-putri-giffany/",
     github: "https://github.com/khansagiffany",
-    resume: "/resume.pdf"
+    resume: "https://khansai.vercel.app/"
   };
 
   const experiences = [
@@ -88,13 +88,13 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for statistical analysis and data visualization built during summer school program at Universitas Brawijaya using R and Shiny.",
-      image: "https://via.placeholder.com/400x250/7C2D12/FFFFFF?text=Analytics+Dashboard",
-      technologies: ["R", "Shiny", "ggplot2", "Statistics", "Data Analysis"],
-      github: "https://github.com/khansagiffany/data-dashboard",
-      demo: "https://analytics-demo.com",
-      year: "2024"
+      title: "CrimsonDash Sales Dashboard",
+      description: "Comprehensive sales analytics for 2022-2024 with advanced filtering, interactive charts, and year-over-year growth insights.",
+      image: "/img/CrimsonDashmain.png",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Recharts", "Data Visualization", "Analytics"],
+      github: "https://github.com/khansagiffany/CrimsonDash",
+      demo: "https://crimson-dash.vercel.app/",
+      year: "2025"
     }
   ];
 
@@ -149,10 +149,6 @@ const Portfolio = () => {
       case 3: // Artha Nusa
         router.push('/experiences/artha-nusa');
         break;
-      case 4:
-        router.push('/experiences/telkom');
-      default:
-        console.log('Experience detail page not found');
     }
   };
 
@@ -179,6 +175,9 @@ const Portfolio = () => {
         break;
       case 3: //eyecon
         router.push('/projects/eyecon');
+        break;
+      case 4: //crimson
+        router.push('/projects/crimson');
         break;
       default:
         console.log('Projects detail page not found');
@@ -289,8 +288,7 @@ const Portfolio = () => {
                   href={profile.resume}
                   className="inline-flex items-center justify-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
                 >
-                  <Download className="w-5 h-5" />
-                  <span>Download CV</span>
+                  <span>Ask Me Anything (via my bot)</span>
                 </a>
                 
                 <button 

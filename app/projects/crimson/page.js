@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { ChevronLeft, ChevronRight, ArrowLeft, Github, ExternalLink, Calendar, Users, Target, CheckCircle, BarChart3, TrendingUp, Filter, Zap } from 'lucide-react';
 
 const CrimsonDashDetail = () => {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Sample images - replace with actual CrimsonDash screenshots
@@ -31,8 +32,7 @@ const CrimsonDashDetail = () => {
 
   // Navigate back function
   const handleBackToMain = () => {
-    // In a real app, this would use router.back()
-    window.history.back();
+    router.back();
   };
 
   const projectFeatures = [

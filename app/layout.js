@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "DigiMate",
-  description: "Your Internship Companion.",
+  title: "Khansa Giffany's Portfolio",
+  description: " ",
 };
 
 export default function RootLayout({ children }) {
