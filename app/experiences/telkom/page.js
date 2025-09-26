@@ -85,7 +85,7 @@ export default function TelkomExperiencePage() {
             className="flex items-center text-stone-600 hover:text-[#800000] transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-            <span className="text-sm sm:text-base">Back to Experience</span>
+            <span className="text-sm sm:text-base">Back to Home Page</span>
           </button>
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">

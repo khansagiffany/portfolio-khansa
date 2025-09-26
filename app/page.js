@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { ChevronDown, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download, Code, Eye } from 'lucide-react';
 import { ReactTyped } from "react-typed";
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -288,7 +289,7 @@ const Portfolio = () => {
                   href={profile.resume}
                   className="inline-flex items-center justify-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
                 >
-                  <span>Ask Me Anything (via my bot)</span>
+                  <span>Ask Anything (via my bot)</span>
                 </a>
                 
                 <button 
@@ -538,10 +539,12 @@ const Portfolio = () => {
           </div>
 
           <div className="text-center">
-            <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-              <Code className="w-5 h-5" />
-              <span>View More Projects</span>
-            </button>
+            <Link href="/projects">
+              <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+                <Code className="w-5 h-5" />
+                <span>View More Projects</span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -631,10 +634,12 @@ const Portfolio = () => {
           </div>
 
           <div className="text-center">
-            <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-              <Award className="w-5 h-5" />
-              <span>View All Certificates</span>
-            </button>
+            <Link href="/certificates">
+              <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+                <Award className="w-5 h-5" />
+                <span>View All Certificates</span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -676,7 +681,7 @@ const Portfolio = () => {
             >
               <Linkedin className="w-8 h-8 text-[#800000] mb-3" />
               <h3 className="font-semibold text-stone-800 mb-1">LinkedIn</h3>
-              <p className="text-stone-600">Connect with me</p>
+              <p className="text-stone-600">Click to Connect with Me</p>
             </a>
           </div>
         </div>
