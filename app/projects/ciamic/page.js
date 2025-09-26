@@ -62,7 +62,7 @@ const CiamicDetail = () => {
               className="flex items-center text-stone-600 hover:text-[#800000] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              <span className="text-sm sm:text-base">Back to Projects</span>
+              <span className="text-sm sm:text-base">Back</span>
             </button>
             <div className="flex items-center gap-4">
               <a 
@@ -246,7 +246,7 @@ const CiamicDetail = () => {
               <h3 className="text-lg font-semibold text-slate-900 mb-4">Quick Links</h3>
               <div className="space-y-3">
                 <a 
-                  href="https://github.com/khansagiffany/ciamic"
+                  href="https://github.com/khansagiffany"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors group"
@@ -273,7 +273,7 @@ const CiamicDetail = () => {
                 Development Team
               </h3>
               <div className="text-slate-700">
-                <p className="mb-2">Lead Developer & Designer</p>
+                <p className="mb-2">Developer & Designer</p>
                 <p className="text-sm text-slate-600">Full-stack development, UI/UX design, and user research</p>
               </div>
             </div>

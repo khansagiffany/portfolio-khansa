@@ -95,7 +95,7 @@ const EyeconDetail = () => {
               className="flex items-center text-stone-600 hover:text-[#800000] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              <span className="text-sm sm:text-base">Back to Projects</span>
+              <span className="text-sm sm:text-base">Back</span>
             </button>
             <div className="flex items-center gap-4">
               <a 

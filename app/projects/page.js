@@ -21,7 +21,7 @@ const ProjectsPage = () => {
     {
       id: 2,
       title: "Digimate - Personal Tracker for Interns",
-      description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management.",
+      description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management. It also provides progress tracking to help interns stay motivated and organized throughout their journey.",
       image: "/img/digimate.jpg",
       technologies: ["Next.js", "Tailwind", "Gemini"],
       github: "https://github.com/khansagiffany/digimate-v2",
@@ -191,9 +191,15 @@ const ProjectsPage = () => {
           <p className="text-gray-600 mb-6">
             Interested in working together or want to see more?
           </p>
+         <a 
+          href="https://www.linkedin.com/in/khansa-putri-giffany" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
           <button className="bg-[#800000] hover:bg-[#600000] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200">
             Get In Touch
           </button>
+        </a>
         </div>
       </div>
     </div>

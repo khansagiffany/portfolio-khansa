@@ -70,7 +70,7 @@ const CrimsonDashDetail = () => {
               className="flex items-center text-stone-600 hover:text-[#800000] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              <span className="text-sm sm:text-base">Back to Projects</span>
+              <span className="text-sm sm:text-base">Back</span>
             </button>
             <div className="flex items-center gap-4">
               <a 
@@ -300,7 +300,7 @@ const CrimsonDashDetail = () => {
                   <span className="text-slate-700 group-hover:text-slate-900">View Source Code</span>
                 </a>
                 <a 
-                  href="#"
+                  href="https://crimson-dash.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors group"
@@ -309,7 +309,7 @@ const CrimsonDashDetail = () => {
                   <span className="text-slate-700 group-hover:text-slate-900">Live Dashboard</span>
                 </a>
                 <a 
-                  href="#"
+                  href="https://crimson-dash.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors group"

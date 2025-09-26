@@ -88,7 +88,7 @@ const UBEducationDetail = () => {
               className="flex items-center text-stone-600 hover:text-[#800000] transition-colors"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-              <span className="text-sm sm:text-base">Back to Education</span>
+              <span className="text-sm sm:text-base">Back</span>
             </button>
             <div className="flex items-center gap-4">
               <a 
@@ -98,7 +98,7 @@ const UBEducationDetail = () => {
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
               >
                 <Download size={16} />
-                <span className="hidden sm:inline">Download Certificate</span>
+                <span className="hidden sm:inline">Download Transcript</span>
               </a>
             </div>
           </div>

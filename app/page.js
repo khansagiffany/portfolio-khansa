@@ -30,7 +30,7 @@ const Portfolio = () => {
       position: "Fullstack Developer",
       duration: "Feb - Aug 2025",
       location: "Telkom Landmark Tower, Jakarta",
-      description: "Developed AI chatbots for internal use, handling both frontend and backend tasks using React, Next.js, and TypeScript. Collaborated with cross-functional teams to improve automation and internal workflows.",
+      description: "Developed AI chatbots for internal use, handling both frontend and backend tasks using React, Laravel, etc. Collaborated with cross-functional teams to improve automation and internal workflows.",
       logo: "https://www.telkom.co.id/minio/show/data/image_upload/page/1594112895830_compress_PNG%20Icon%20Telkom.png",
       skills: ["React.js", "Laravel", "Python", "MongoDB", "Docker", "Postman", "Git", "CI/CD", "AI Chatbot Development"]
     },
@@ -92,7 +92,7 @@ const Portfolio = () => {
       title: "CrimsonDash Sales Dashboard",
       description: "Comprehensive sales analytics for 2022-2024 with advanced filtering, interactive charts, and year-over-year growth insights.",
       image: "/img/CrimsonDashmain.png",
-      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Recharts", "Data Visualization", "Analytics"],
+      technologies: ["TypeScript", "Data Visualization"],
       github: "https://github.com/khansagiffany/CrimsonDash",
       demo: "https://crimson-dash.vercel.app/",
       year: "2025"
@@ -690,8 +690,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="bg-stone-800 text-stone-300 py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2024 {profile.name}. All rights reserved.</p>
-          <p className="mt-2 text-sm">Built with Next.js and Tailwind CSS</p>
+          <p>&copy; 2025 {profile.name}. All rights reserved.</p>
         </div>
       </footer>
     </div>
