@@ -17,7 +17,7 @@ const Portfolio = () => {
     description: "Always exploring tech, design, and innovation to create meaningful experiences, from AI-driven solutions to user-friendly web and mobile apps. Staying curious about how technology can make life easier.",
     location: "Jakarta, Indonesia",
     email: "khansaagiffany@gmail.com",
-    phone: "+6288972910997",
+    phone: " ",
     linkedin: "https://www.linkedin.com/in/khansa-putri-giffany/",
     github: "https://github.com/khansagiffany",
     resume: "https://khansai.vercel.app/"
