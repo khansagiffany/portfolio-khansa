@@ -213,7 +213,7 @@ const DigimateDetail = () => {
                 Digimate is a comprehensive web-based personal tracker specifically designed for interns to enhance their productivity and internship experience. The platform combines modern web technologies with AI capabilities to provide a seamless task management solution.
               </p>
               <p className="text-slate-700 leading-relaxed text-lg">
-                Built with Next.js and styled with Tailwind CSS, Digimate features an intelligent chatbot powered by Google's Gemini AI that provides personalized guidance for internship-related questions, helping users navigate their professional journey more effectively.
+                Built with Next.js and styled with Tailwind CSS, Digimate features an intelligent chatbot powered by Google Gemini AI that provides personalized guidance for internship-related questions, helping users navigate their professional journey more effectively.
               </p>
             </section>
 
@@ -260,7 +260,7 @@ const DigimateDetail = () => {
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
                   <h3 className="font-semibold text-slate-900 mb-2">Gemini AI Integration</h3>
-                  <p className="text-slate-700">Integrated Google's Gemini AI to provide intelligent responses and personalized guidance for internship-related queries.</p>
+                  <p className="text-slate-700">Integrated Google Gemini AI to provide intelligent responses and personalized guidance for internship-related queries.</p>
                 </div>
               </div>
             </section>
