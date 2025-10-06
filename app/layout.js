@@ -1,14 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta-sans",
+  display: "swap",
 });
 
 export const metadata = {
@@ -24,7 +21,7 @@ export const metadata = {
     siteName: "Khansa Giffany Portfolio",
     images: [
       {
-        url: "/og-image.png", // otomatis jadi absolute: https://portfolio-khansa.vercel.app/og-image.png
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Khansa Portfolio Preview",
@@ -43,10 +40,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={plusJakartaSans.variable}>
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

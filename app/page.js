@@ -188,21 +188,21 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-stone-200 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/10 backdrop-blur-lg border-b border-white/20 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold text-stone-800">Portfolio</div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('about')} className="text-stone-600 hover:text-[#800000] transition-colors">About</button>
-              <button onClick={() => scrollToSection('experience')} className="text-stone-600 hover:text-[#800000] transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('projects')} className="text-stone-600 hover:text-[#800000] transition-colors">Projects</button>
-              <button onClick={() => scrollToSection('education')} className="text-stone-600 hover:text-[#800000] transition-colors">Education</button>
-              <button onClick={() => scrollToSection('certificates')} className="text-stone-600 hover:text-[#800000] transition-colors">Certificates</button>
-              <button onClick={() => scrollToSection('contact')} className="text-stone-600 hover:text-[#800000] transition-colors">Contact</button>
+              <button onClick={() => scrollToSection('about')} className="text-stone-700 hover:text-[#800000] transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="text-stone-700 hover:text-[#800000] transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('projects')} className="text-stone-700 hover:text-[#800000] transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('education')} className="text-stone-700 hover:text-[#800000] transition-colors">Education</button>
+              <button onClick={() => scrollToSection('certificates')} className="text-stone-700 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('contact')} className="text-stone-700 hover:text-[#800000] transition-colors">Contact</button>
             </div>
-  
+
             {/* Mobile Menu Button */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -211,233 +211,313 @@ const Portfolio = () => {
               <ChevronDown className={`w-6 h-6 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
             </button>
           </div>
-  
+
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-2">
-              <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">About</button>
-              <button onClick={() => scrollToSection('experience')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Projects</button>
-              <button onClick={() => scrollToSection('education')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Education</button>
-              <button onClick={() => scrollToSection('certificates')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Certificates</button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-stone-600 hover:text-[#800000] transition-colors">Contact</button>
+            <div className="md:hidden mt-4 pb-4 space-y-2 bg-white/20 backdrop-blur-md rounded-lg p-4 border border-white/30">
+              <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('education')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Education</button>
+              <button onClick={() => scrollToSection('certificates')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Contact</button>
             </div>
           )}
         </div>
       </nav>
   
       {/* Hero Section */}
-      <section id="hero" className="pt-24 pb-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-12 items-center">
+      <section id="hero" className="pt-20 pb-12 px-6 relative overflow-hidden min-h-screen flex items-center">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#800000]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-rose-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-[#800000]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8 items-center">
             
-            {/* Left Content - Photo */}
+            {/* Left Content - Photo with Glass Effect */}
             <div className="flex justify-center lg:justify-center">
-              <div className="relative">
-                <div className="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl bg-gradient-to-br from-[#800000]/20 to-rose-200 p-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                  <div className="w-full h-full rounded-xl bg-white flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/img/khansagiffany.jpg"
-                    alt={profile.name}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="relative group">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000] to-rose-500 rounded-2xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                
+                {/* Main Photo Card */}
+                <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-2xl bg-white/40 backdrop-blur-xl p-1 shadow-2xl border border-white/60 hover:scale-105 transition-all duration-500">
+                  <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm flex items-center justify-center overflow-hidden border border-white/40">
+                    <img 
+                      src="/img/khansagiffany.jpg"
+                      alt={profile.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 
                 {/* Floating decoration */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#800000] rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-rose-600 rounded-full animate-pulse"></div>
+                <div className="absolute -top-3 -right-3 w-10 h-10 bg-gradient-to-br from-[#800000] to-rose-600 rounded-2xl backdrop-blur-sm shadow-lg flex items-center justify-center animate-bounce border border-white/40">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                <div className="absolute -bottom-3 -left-3 w-8 h-8 bg-gradient-to-br from-[#800000] to-rose-500 rounded-xl backdrop-blur-sm shadow-lg animate-pulse border border-white/40"></div>
               </div>
             </div>
 
-            {/* Right Content - Text */}
-            <div className="space-y-6 pr-6 lg:pr-12 max-w-2xl">
-              <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-[#800000]/10 text-[#800000] px-3 py-1 rounded-full text-sm font-medium">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            {/* Right Content - Text with Glass Cards */}
+            <div className="space-y-4 pr-6 lg:pr-12 max-w-2xl">
+              <div className="space-y-3">
+                {/* Status Badge */}
+                <div className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-xl text-[#800000] px-3 py-1.5 rounded-full text-sm font-bold shadow-lg border border-white/60 hover:scale-105 transition-transform">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
                   <span>Available for work</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-6xl font-bold text-stone-800 leading-tight">
-                  Hi, I am <span className="text-transparent bg-gradient-to-r from-[#800000] to-rose-700 bg-clip-text">
-                    {profile.name}
+                {/* Main Heading */}
+                <h1 className="text-4xl lg:text-5xl font-bold text-stone-800 leading-tight flex flex-wrap items-center gap-2 text-left">
+                  <span>Hi, I am</span>
+                  <span className="relative inline-block whitespace-nowrap">
+                    <span className="text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text font-extrabold">
+                      {profile.name}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#800000]/20 to-rose-600/20 blur-xl -z-10 animate-pulse"></div>
                   </span>
                 </h1>
 
-                <h2 className="text-xl lg:text-2xl text-stone-600 font-light">
-                  <ReactTyped
-                    strings={["Fullstack Developer", "AI Engineer"]}
-                    typeSpeed={60}
-                    backSpeed={40}
-                    backDelay={1500}
-                    loop
-                  />
-                </h2>
+                {/* Subtitle with Glass Background */}
+                <div className="bg-white/40 backdrop-blur-xl p-3 rounded-xl border border-white/60 shadow-xl inline-block">
+                  <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-stone-700 to-stone-900 bg-clip-text text-transparent">
+                    <ReactTyped
+                      strings={["Fullstack Developer", "AI Engineer"]}
+                      typeSpeed={60}
+                      backSpeed={40}
+                      backDelay={1500}
+                      loop
+                    />
+                  </h2>
+                </div>
                 
-                <p className="text-lg text-stone-600 leading-relaxed">
+                {/* Description */}
+                <p className="text-base text-stone-600 leading-relaxed bg-white/30 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-lg">
                   {profile.description}
                 </p>
               </div>
 
-              <div className="flex items-center space-x-2 text-stone-500">
-                <MapPin className="w-5 h-5" />
+              {/* Location Badge */}
+              <div className="inline-flex items-center space-x-2 text-stone-600 bg-white/50 backdrop-blur-xl px-3 py-1.5 rounded-full border border-white/60 shadow-md text-sm">
+                <MapPin className="w-4 h-4" />
                 <span>{profile.location}</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href={profile.resume}
-                  className="inline-flex items-center justify-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105"
-                >
-                  <span>Ask Anything (via my bot)</span>
-                </a>
-                
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="inline-flex items-center justify-center space-x-2 border-2 border-stone-300 hover:border-[#800000] text-stone-600 hover:text-[#800000] px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Contact Me</span>
-                </button>
-                  <div className="flex items-center space-x-4">
-                  <a href={profile.linkedin} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
-                    <Linkedin className="w-6 h-6 text-stone-600 hover:text-blue-600" />
-                  </a>
-                  <a href={profile.github} className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all hover:scale-105">
-                    <Github className="w-6 h-6 text-stone-600 hover:text-stone-800" />
-                  </a>
-                </div>
-              </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
+              <a 
+                href={profile.resume}
+                className="flex items-center justify-center bg-gradient-to-r from-[#800000] to-rose-700 text-white px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 overflow-hidden border border-white/20 text-sm"
+              >
+                <span className="relative z-10">Ask Me Here (BOT)</span>
+              </a>
+              
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="flex items-center justify-center gap-2 bg-white/60 backdrop-blur-xl border border-white/80 text-stone-700 hover:text-[#800000] px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-white/80 text-sm"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Mail</span>
+              </button>
+
+              {/* Social Links - sekarang sejajar dengan button lain */}
+              <a href={profile.linkedin} className="flex items-center justify-center w-12 h-12 bg-white/60 backdrop-blur-xl rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-110 border border-white/60 group">
+                <Linkedin className="w-5 h-5 text-stone-600 group-hover:text-blue-600 transition-colors" />
+              </a>
+              <a href={profile.github} className="flex items-center justify-center w-12 h-12 bg-white/60 backdrop-blur-xl rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-110 border border-white/60 group">
+                <Github className="w-5 h-5 text-stone-600 group-hover:text-stone-900 transition-colors" />
+              </a>
+            </div>
             </div>
           </div>
         </div>
       </section>
   
       {/* About Section */}
-      <section id="about" className="py-16 px-6 bg-white">
+      <section id="about" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-purple-50 -z-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#800000]/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-rose-300/20 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
         <div className="max-w-6xl mx-auto">
+          {/* Header with Glass Effect */}
           <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            Let&apos;s get to know Khansa!</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+            <div className="inline-block bg-white/60 backdrop-blur-xl px-8 py-6 rounded-3xl border border-white/60 shadow-2xl mb-4 hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Let&apos;s get to know Khansa!
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left Content - Bio */}
             <div className="space-y-6">
-              <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                Khansa Putri Giffany is a Fullstack Developer at Telkom Indonesia, specializing in AI chatbot development for
-  internal use. A fourth year Informatics Engineering student at Universitas Mercu Buana, she previously led the
-  EYECON eye health app project at Bangkit Academy, graduating with distinction.
-              </p>
+              {/* Bio Cards with Glass */}
+              <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
+                <p className="text-lg text-stone-600 leading-relaxed text-justify">
+                  Khansa Putri Giffany is a Fullstack Developer at Telkom Indonesia, specializing in AI chatbot development for
+                  internal use. A fourth year Informatics Engineering student at Universitas Mercu Buana, she previously led the
+                  EYECON eye health app project at Bangkit Academy, graduating with distinction.
+                </p>
+              </div>
               
-              <p className="text-lg text-stone-600 leading-relaxed text-justify">
-               With expertise in project
-  management, software development, and AI integration, Khansa thrives in fast-paced corporate environments. Her
-  ability to adapt quickly and collaborate effectively makes her a valuable asset in dynamic teams, driving innovation
-  and efficiency
-              </p>
-  
+              <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
+                <p className="text-lg text-stone-600 leading-relaxed text-justify">
+                  With expertise in project management, software development, and AI integration, Khansa thrives in fast-paced 
+                  corporate environments. Her ability to adapt quickly and collaborate effectively makes her a valuable asset in 
+                  dynamic teams, driving innovation and efficiency.
+                </p>
+              </div>
+
+              {/* Stats with Glass */}
               <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="text-center p-4 bg-stone-50 rounded-lg">
-                  <div className="text-2xl font-bold text-[#800000]">2+</div>
-                  <div className="text-stone-600">Years Experience</div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#800000] to-rose-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="relative text-center p-6 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl hover:scale-105 transition-transform">
+                    <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-[#800000] to-rose-600 bg-clip-text">2+</div>
+                    <div className="text-stone-600 font-medium mt-1">Years Experience</div>
+                  </div>
                 </div>
-                <div className="text-center p-4 bg-stone-50 rounded-lg">
-                  <div className="text-2xl font-bold text-[#800000]">25+</div>
-                  <div className="text-stone-600">Projects Completed</div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#800000] to-rose-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                  <div className="relative text-center p-6 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl hover:scale-105 transition-transform">
+                    <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-[#800000] to-rose-600 bg-clip-text">25+</div>
+                    <div className="text-stone-600 font-medium mt-1">Projects Completed</div>
+                  </div>
                 </div>
               </div>
             </div>
-  
+
+            {/* Right Content - Skills */}
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-stone-800 mb-4">Skills & Technologies</h3>
-              <div className="space-y-4">
-                {[
-                  { 
-                    category: "Frontend", 
-                    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "SCSS", "Bootstrap", "Flutter"] 
-                  },
-                  { 
-                    category: "Backend", 
-                    skills: ["Node.js", "Laravel", "PHP", "MySQL", "PostgreSQL", "MongoDB"] 
-                  },
-                  { 
-                    category: "Programming & Data", 
-                    skills: ["Python", "R", "C/C++", "Java", "SQL", "Pandas", "TensorFlow", "Keras"] 
-                  },
-                  { 
-                    category: "Tools & Platforms", 
-                    skills: ["Git", "Docker", "Postman", "VS Code", "Figma", "Firebase", "pgAdmin", "Microsoft Office"] 
-                  }
-                ].map((skillGroup, index) => (
-                  <div key={index}>
-                    <h4 className="font-medium text-stone-700 mb-2">{skillGroup.category}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {skillGroup.skills.map((skill, skillIndex) => (
-                        <span 
-                          key={skillIndex}
-                          className="px-3 py-1 bg-[#800000]/10 text-[#800000] rounded-full text-sm font-medium"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+              <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl">
+                <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-stone-700 to-stone-900 bg-clip-text mb-6">
+                  Skills & Technologies
+                </h3>
+                <div className="space-y-5">
+                  {[
+                    { 
+                      category: "Frontend", 
+                      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "SCSS", "Bootstrap", "Flutter"],
+                      gradient: "from-blue-500 to-cyan-500"
+                    },
+                    { 
+                      category: "Backend", 
+                      skills: ["Node.js", "Laravel", "PHP", "MySQL", "PostgreSQL", "MongoDB"],
+                      gradient: "from-green-500 to-emerald-500"
+                    },
+                    { 
+                      category: "Programming & Data", 
+                      skills: ["Python", "R", "C/C++", "Java", "SQL", "Pandas", "TensorFlow", "Keras"],
+                      gradient: "from-purple-500 to-pink-500"
+                    },
+                    { 
+                      category: "Tools & Platforms", 
+                      skills: ["Git", "Docker", "Postman", "VS Code", "Figma", "Firebase", "pgAdmin", "Microsoft Office"],
+                      gradient: "from-orange-500 to-red-500"
+                    }
+                  ].map((skillGroup, index) => (
+                    <div key={index} className="group">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <div className={`w-1 h-6 bg-gradient-to-b ${skillGroup.gradient} rounded-full`}></div>
+                        <h4 className="font-bold text-stone-800">{skillGroup.category}</h4>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {skillGroup.skills.map((skill, skillIndex) => (
+                          <span 
+                            key={skillIndex}
+                            className="px-3 py-1.5 bg-white/70 backdrop-blur-md text-[#800000] rounded-full text-sm font-semibold border border-white/60 shadow-md hover:shadow-lg hover:scale-110 transition-all cursor-default"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>  
+      </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 px-6 bg-stone-50">
+      <section id="experience" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-rose-50 -z-10"></div>
+        <div className="absolute top-20 left-0 w-72 h-72 bg-[#800000]/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-rose-300/20 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
         <div className="max-w-6xl mx-auto">
+          {/* Header with Glass */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Work Experience</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+            <div className="inline-block bg-white/60 backdrop-blur-xl px-8 py-6 rounded-3xl border border-white/60 shadow-2xl hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Work Experience
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
               <div 
                 key={exp.id} 
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] relative"
+                className="group relative bg-white/50 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/60 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
               >
+                {/* Glow Effect on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                
                 <div className="flex flex-col lg:flex-row gap-6">
+                  {/* Logo with Glass */}
                   <div className="flex-shrink-0">
-                    <img 
-                      src={exp.logo} 
-                      alt={exp.company}
-                      className="w-16 h-16 rounded-lg object-cover"
-                    />
+                    <div className="relative w-16 h-16 bg-white/70 backdrop-blur-md rounded-xl p-2 shadow-lg border border-white/60">
+                      <img 
+                        src={exp.logo} 
+                        alt={exp.company}
+                        className="w-full h-full rounded-lg object-cover"
+                      />
+                    </div>
                   </div>
                   
-                  <div className="flex-grow space-y-3">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                      <div>
-                        <h3 className="text-xl font-semibold text-stone-800">{exp.position}</h3>
-                        <p className="text-[#800000] font-medium">{exp.company}</p>
+                  <div className="flex-grow space-y-3 pb-16 lg:pb-0">
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-3">
+                      <div className="space-y-1">
+                        <h3 className="text-xl font-bold text-stone-800">{exp.position}</h3>
+                        <p className="text-[#800000] font-semibold text-lg">{exp.company}</p>
                       </div>
-                      <div className="flex flex-col lg:items-end text-sm text-stone-500">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>{exp.duration}</span>
+                      
+                      {/* Date & Location Badge */}
+                      <div className="flex flex-col gap-2">
+                        <div className="inline-flex items-center space-x-2 bg-white/70 backdrop-blur-md px-3 py-1.5 rounded-full text-sm text-stone-600 border border-white/60 shadow-md">
+                          <Calendar className="w-4 h-4 text-[#800000]" />
+                          <span className="font-medium">{exp.duration}</span>
                         </div>
-                        <div className="flex items-center space-x-1 mt-1">
-                          <MapPin className="w-4 h-4" />
-                          <span>{exp.location}</span>
+                        <div className="inline-flex items-center space-x-2 bg-white/70 backdrop-blur-md px-3 py-1.5 rounded-full text-sm text-stone-600 border border-white/60 shadow-md">
+                          <MapPin className="w-4 h-4 text-[#800000]" />
+                          <span className="font-medium">{exp.location}</span>
                         </div>
                       </div>
                     </div>
                     
-                    <p className="text-stone-600 leading-relaxed">{exp.description}</p>
+                    {/* Description */}
+                    <p className="text-stone-600 leading-relaxed bg-white/40 backdrop-blur-sm p-4 rounded-xl border border-white/40">
+                      {exp.description}
+                    </p>
                     
-                    <div className="flex flex-wrap gap-2 pb-12 lg:pb-0">
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, skillIndex) => (
                         <span 
                           key={skillIndex}
-                          className="px-2 py-1 bg-stone-100 text-stone-700 rounded text-sm"
+                          className="px-3 py-1.5 bg-white/70 backdrop-blur-md text-[#800000] rounded-full text-sm font-semibold border border-white/60 shadow-md hover:shadow-lg hover:scale-110 transition-all"
                         >
                           {skill}
                         </span>
@@ -446,13 +526,13 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                {/* Button di pojok kanan bawah */}
+                {/* View Details Button */}
                 <button 
-                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  className="absolute bottom-4 right-4 group/btn bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#800000]/50 flex items-center space-x-2 border border-white/20"
                   onClick={() => handleViewDetails(exp.id)}
                 >
                   <span>View Details</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
@@ -463,37 +543,52 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 px-6 bg-white">
+      <section id="projects" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-purple-50 -z-10"></div>
+        <div className="absolute top-10 right-10 w-96 h-96 bg-[#800000]/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-rose-300/25 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
         <div className="max-w-6xl mx-auto">
+          {/* Header with Glass */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Featured Projects</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+            <div className="inline-block bg-white/50 backdrop-blur-2xl px-8 py-6 rounded-3xl border border-white/70 shadow-2xl hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Featured Projects
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {projects.slice(0, 4).map((project) => (
               <div 
                 key={project.id} 
-                className="bg-stone-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02] relative group"
+                className="group relative bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 hover:scale-[1.03]"
               >
-                <div className="relative">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                
+                {/* Image Section */}
+                <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="flex space-x-2">
+                  {/* Overlay with Glass Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                    <div className="flex space-x-3">
                       <a 
                         href={project.github}
-                        className="p-2 bg-white rounded-full hover:bg-stone-100 transition-colors"
+                        className="p-3 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-all shadow-lg hover:scale-110 border border-white/60"
                         title="View Code"
                       >
                         <Github className="w-5 h-5 text-stone-800" />
                       </a>
                       <a 
                         href={project.demo}
-                        className="p-2 bg-white rounded-full hover:bg-stone-100 transition-colors"
+                        className="p-3 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-all shadow-lg hover:scale-110 border border-white/60"
                         title="Live Demo"
                       >
                         <ExternalLink className="w-5 h-5 text-stone-800" />
@@ -502,47 +597,59 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                <div className="p-4 pb-12">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-semibold text-stone-800">{project.title}</h3>
-                    <span className="text-sm text-stone-500">{project.year}</span>
+                {/* Content Section */}
+                <div className="p-5 pb-16 bg-white/30 backdrop-blur-md">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="font-bold text-lg text-stone-800">{project.title}</h3>
+                    <span className="px-3 py-1 bg-white/70 backdrop-blur-md rounded-full text-sm text-stone-600 font-semibold border border-white/60 shadow-md">
+                      {project.year}
+                    </span>
                   </div>
-                  <p className="text-stone-600 text-sm mb-3 leading-relaxed">{project.description}</p>
+                  <p className="text-stone-600 text-sm mb-4 leading-relaxed">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-1">
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 3).map((tech, index) => (
                       <span 
                         key={index}
-                        className="px-2 py-1 bg-[#800000]/10 text-[#800000] rounded text-xs font-medium"
+                        className="px-3 py-1.5 bg-white/70 backdrop-blur-md text-[#800000] rounded-full text-xs font-bold border border-white/60 shadow-md hover:scale-110 transition-transform"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-stone-200 text-stone-600 rounded text-xs font-medium">
+                      <span className="px-3 py-1.5 bg-white/70 backdrop-blur-md text-stone-600 rounded-full text-xs font-bold border border-white/60 shadow-md">
                         +{project.technologies.length - 3} more
                       </span>
                     )}
                   </div>
                 </div>
                 
-                {/* View Details button */}
+                {/* View Details Button */}
                 <button 
-                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  className="absolute bottom-4 right-4 group/btn bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#800000]/50 flex items-center space-x-2 border border-white/30"
                   onClick={() => handleViewProject(project.id)}
                 >
-                  <Eye className="w-3 h-3" />
+                  <Eye className="w-4 h-4" />
                   <span>View Details</span>
+                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </button>
               </div>
             ))}
           </div>
 
+          {/* View More Button with Glass */}
           <div className="text-center">
             <Link href="/projects">
-              <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-                <Code className="w-5 h-5" />
-                <span>View More Projects</span>
+              <button className="group relative inline-flex items-center space-x-2 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 border border-white/30 overflow-hidden">
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <Code className="w-5 h-5 relative z-10" />
+                <span className="relative z-10">View More Projects</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
             </Link>
           </div>
@@ -550,41 +657,72 @@ const Portfolio = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-16 px-6 bg-stone-50">
+      <section id="education" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-rose-50 -z-10"></div>
+        <div className="absolute top-20 left-0 w-72 h-72 bg-[#800000]/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-rose-300/25 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
         <div className="max-w-6xl mx-auto">
+          {/* Header with Glass */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Education</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+            <div className="inline-block bg-white/50 backdrop-blur-2xl px-8 py-6 rounded-3xl border border-white/70 shadow-2xl hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Education
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {education.map((edu) => (
               <div 
                 key={edu.id} 
-                className="bg-stone-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] relative"
+                className="group relative bg-white/40 backdrop-blur-2xl rounded-2xl p-6 shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 hover:scale-[1.03]"
               >
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                
                 <div className="flex items-start space-x-4">
-                  <img 
-                    src={edu.logo} 
-                    alt={edu.institution}
-                    className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
-                  />
-                  <div className="flex-grow pb-12">
-                    <h3 className="text-lg font-semibold text-stone-800">{edu.degree}</h3>
-                    <p className="text-[#800000] font-medium mb-2">{edu.institution}</p>
-                    <div className="flex items-center justify-between text-sm text-stone-600 mb-4">
-                      <span>{edu.duration}</span>
-                      <span className="font-medium">GPA: {edu.gpa}</span>
+                  {/* Logo with Glass */}
+                  <div className="flex-shrink-0">
+                    <div className="relative w-14 h-14 bg-white/70 backdrop-blur-md rounded-xl p-2 shadow-lg border border-white/60 group-hover:scale-110 transition-transform">
+                      <img 
+                        src={edu.logo} 
+                        alt={edu.institution}
+                        className="w-full h-full rounded-lg object-cover"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="flex-grow pb-16">
+                    {/* Header Info */}
+                    <div className="space-y-2 mb-4">
+                      <h3 className="text-xl font-bold text-stone-800">{edu.degree}</h3>
+                      <p className="text-[#800000] font-semibold text-lg">{edu.institution}</p>
+                      
+                      {/* Duration & GPA Badges */}
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        <span className="inline-flex items-center px-3 py-1.5 bg-white/70 backdrop-blur-md rounded-full text-sm text-stone-600 font-semibold border border-white/60 shadow-md">
+                          📅 {edu.duration}
+                        </span>
+                        <span className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#800000]/10 to-rose-600/10 backdrop-blur-md rounded-full text-sm text-[#800000] font-bold border border-white/60 shadow-md">
+                          🎯 GPA: {edu.gpa}
+                        </span>
+                      </div>
                     </div>
                     
-                    {/* Activities Section */}
-                    <div className="mt-4">
-                      <h4 className="text-sm font-semibold text-stone-700 mb-2">Activities & Achievements:</h4>
-                      <ul className="space-y-1">
+                    {/* Activities Section with Glass */}
+                    <div className="bg-white/30 backdrop-blur-md rounded-xl p-4 border border-white/50 shadow-md">
+                      <h4 className="text-sm font-bold text-stone-800 mb-3 flex items-center space-x-2">
+                        <span className="w-1 h-4 bg-gradient-to-b from-[#800000] to-rose-600 rounded-full"></span>
+                        <span>Activities & Achievements</span>
+                      </h4>
+                      <ul className="space-y-2">
                         {edu.activities.map((activity, index) => (
-                          <li key={index} className="text-xs text-stone-600 flex items-start">
-                            <span className="w-1 h-1 bg-[#800000] rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            <span>{activity}</span>
+                          <li key={index} className="text-sm text-stone-600 flex items-start group/item">
+                            <span className="w-1.5 h-1.5 bg-[#800000] rounded-full mt-1.5 mr-3 flex-shrink-0 group-hover/item:scale-150 transition-transform"></span>
+                            <span className="leading-relaxed">{activity}</span>
                           </li>
                         ))}
                       </ul>
@@ -592,13 +730,13 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                {/* Button View Details di pojok kanan bawah */}
+                {/* View Details Button */}
                 <button 
-                  className="absolute bottom-4 right-4 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-[#660000] hover:to-rose-800 text-white px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-1"
+                  className="absolute bottom-4 right-4 group/btn bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#800000]/50 flex items-center space-x-2 border border-white/30"
                   onClick={() => handleViewEducationDetails(edu.id)}
                 >
                   <span>View Details</span>
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
@@ -609,35 +747,78 @@ const Portfolio = () => {
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-16 px-6 bg-white">
+      <section id="certificates" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-purple-50 -z-10"></div>
+        <div className="absolute top-10 right-10 w-96 h-96 bg-[#800000]/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-rose-300/25 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
         <div className="max-w-6xl mx-auto">
+          {/* Header with Glass */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Certificates</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto"></div>
+            <div className="inline-block bg-white/50 backdrop-blur-2xl px-8 py-6 rounded-3xl border border-white/70 shadow-2xl hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Certificates
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {certificates.slice(0, 3).map((cert) => (
-              <div key={cert.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <img 
-                  src={cert.image} 
-                  alt={cert.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold text-stone-800 mb-1">{cert.title}</h3>
-                  <p className="text-stone-600 text-sm mb-1">{cert.issuer}</p>
-                  <p className="text-stone-500 text-sm">{cert.year}</p>
+              <div 
+                key={cert.id} 
+                className="group relative bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 hover:scale-[1.05]"
+              >
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+                
+                {/* Certificate Image with Overlay */}
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  {/* Glass Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#800000]/80 via-[#800000]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                    <div className="bg-white/90 backdrop-blur-md rounded-full p-4 shadow-2xl transform scale-0 group-hover:scale-100 transition-transform duration-300 border border-white/60">
+                      <Award className="w-8 h-8 text-[#800000]" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content with Glass Effect */}
+                <div className="p-5 bg-white/30 backdrop-blur-md">
+                  <h3 className="font-bold text-lg text-stone-800 mb-2 line-clamp-2 group-hover:text-[#800000] transition-colors">
+                    {cert.title}
+                  </h3>
+                  <div className="space-y-2">
+                    <p className="text-stone-600 text-sm font-medium">{cert.issuer}</p>
+                    <div className="inline-flex items-center px-3 py-1.5 bg-white/70 backdrop-blur-md rounded-full text-sm text-[#800000] font-bold border border-white/60 shadow-md">
+                      📅  {cert.year}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative Corner */}
+                <div className="absolute top-3 right-3 w-10 h-10 bg-gradient-to-br from-[#800000] to-rose-600 rounded-full backdrop-blur-sm shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/40">
+                  <span className="text-white text-xs font-bold">✓</span>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* View All Button with Glass */}
           <div className="text-center">
             <Link href="/certificates">
-              <button className="inline-flex items-center space-x-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
-                <Award className="w-5 h-5" />
-                <span>View All Certificates</span>
+              <button className="group relative inline-flex items-center space-x-2 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 border border-white/30 overflow-hidden">
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <Award className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform" />
+                <span className="relative z-10">View All Certificates</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
             </Link>
           </div>
@@ -645,52 +826,102 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-6  bg-stone-50">
+      <section id="contact" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-rose-50 -z-10"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-[#800000]/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-rose-300/25 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
         <div className="max-w-4xl mx-auto text-center">
+          {/* Header with Glass */}
           <div className="mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">Let&apos;s Work Together</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mb-6"></div>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+            <div className="inline-block bg-white/50 backdrop-blur-2xl px-8 py-6 rounded-3xl border border-white/70 shadow-2xl hover:scale-105 transition-transform mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Let&apos;s Work Together
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <p className="text-lg text-stone-600 max-w-2xl mx-auto bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-lg leading-relaxed">
               I&apos;m always interested in new opportunities and exciting projects. 
               Let&apos;s discuss how we can bring your ideas to life.
             </p>
           </div>
 
+          {/* Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <a 
               href={`mailto:${profile.email}`}
-              className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="group relative flex flex-col items-center p-8 bg-white/40 backdrop-blur-2xl rounded-2xl border border-white/70 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110"
             >
-              <Mail className="w-8 h-8 text-[#800000] mb-3" />
-              <h3 className="font-semibold text-stone-800 mb-1">Email</h3>
-              <p className="text-stone-600">{profile.email}</p>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+              
+              {/* Icon Container with Glass */}
+              <div className="w-16 h-16 bg-white/70 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 shadow-lg border border-white/60 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                <Mail className="w-8 h-8 text-[#800000] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="font-bold text-stone-800 mb-2 text-lg">Email</h3>
+              <p className="text-stone-600 text-sm font-medium">{profile.email}</p>
             </a>
 
             <a 
               href={`tel:${profile.phone}`}
-              className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="group relative flex flex-col items-center p-8 bg-white/40 backdrop-blur-2xl rounded-2xl border border-white/70 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110"
             >
-              <Phone className="w-8 h-8 text-[#800000] mb-3" />
-              <h3 className="font-semibold text-stone-800 mb-1">Phone</h3>
-              <p className="text-stone-600">{profile.phone}</p>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+              
+              {/* Icon Container with Glass */}
+              <div className="w-16 h-16 bg-white/70 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 shadow-lg border border-white/60 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                <Phone className="w-8 h-8 text-[#800000] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="font-bold text-stone-800 mb-2 text-lg">Phone</h3>
+              <p className="text-stone-600 text-sm font-medium">{profile.phone}</p>
             </a>
 
             <a 
               href={profile.linkedin}
-              className="flex flex-col items-center p-6 bg-stone-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="group relative flex flex-col items-center p-8 bg-white/40 backdrop-blur-2xl rounded-2xl border border-white/70 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110"
             >
-              <Linkedin className="w-8 h-8 text-[#800000] mb-3" />
-              <h3 className="font-semibold text-stone-800 mb-1">LinkedIn</h3>
-              <p className="text-stone-600">Click to Connect with Me</p>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+              
+              {/* Icon Container with Glass */}
+              <div className="w-16 h-16 bg-white/70 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 shadow-lg border border-white/60 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                <Linkedin className="w-8 h-8 text-[#800000] group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="font-bold text-stone-800 mb-2 text-lg">LinkedIn</h3>
+              <p className="text-stone-600 text-sm font-medium">Connect with Me</p>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-stone-800 text-stone-300 py-8 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2025 {profile.name}. All rights reserved.</p>
+      {/* Footer with Glass */}
+      <footer className="relative py-12 px-6 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#800000] via-[#600000] to-stone-900"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-transparent via-white/5 to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Footer Content with Glass Card */}
+          <div className="bg-[#800000]/30 backdrop-blur-xl rounded-3xl p-8 border border-[#800000]/40 shadow-2xl">
+            <div className="text-center space-y-6">
+              {/* Name */}
+              <h3 className="text-2xl font-bold text-white drop-shadow-lg">
+                {profile.name}
+              </h3>
+              
+              {/* Divider */}
+              <div className="w-full h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+              
+              {/* Copyright */}
+              <p className="text-white/90 text-sm drop-shadow">
+                &copy; 2025 {profile.name}. All rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
