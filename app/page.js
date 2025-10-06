@@ -309,23 +309,21 @@ const Portfolio = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
+            <div className="flex flex-row flex-wrap items-center gap-3 justify-start sm:justify-start">
               <a 
                 href={profile.resume}
-                className="flex items-center justify-center bg-gradient-to-r from-[#800000] to-rose-700 text-white px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 overflow-hidden border border-white/20 text-sm"
+                className="flex items-center justify-center bg-gradient-to-r from-[#800000] to-rose-700 text-white px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 overflow-hidden border border-white/20 text-sm shadow-lg"
               >
-                <span className="relative z-10">Ask Me Here (BOT)</span>
+                <span className="relative z-10">khansAI</span>
               </a>
               
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="flex items-center justify-center gap-2 bg-white/60 backdrop-blur-xl border border-white/80 text-stone-700 hover:text-[#800000] px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-white/80 text-sm"
+                className="flex items-center justify-center gap-2 bg-white/60 backdrop-blur-xl border border-white/80 text-stone-700 hover:text-[#800000] w-12 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:bg-white/80 text-sm shadow-lg"
               >
                 <Mail className="w-4 h-4" />
-                <span>Mail</span>
               </button>
 
-              {/* Social Links - sekarang sejajar dengan button lain */}
               <a href={profile.linkedin} className="flex items-center justify-center w-12 h-12 bg-white/60 backdrop-blur-xl rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-110 border border-white/60 group">
                 <Linkedin className="w-5 h-5 text-stone-600 group-hover:text-blue-600 transition-colors" />
               </a>
