@@ -308,7 +308,7 @@ const Portfolio = () => {
                 <span>{profile.location}</span>
               </div>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons NEW*/}
             <div className="flex flex-row flex-wrap items-center gap-3 justify-start sm:justify-start">
               <a 
                 href={profile.resume}
