@@ -300,7 +300,7 @@ const handleViewDetails = (experienceId) => {
                 <div className="bg-white/40 backdrop-blur-xl p-3 rounded-xl border border-white/60 shadow-xl inline-block">
                   <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-stone-700 to-stone-900 bg-clip-text text-transparent">
                     <ReactTyped
-                      strings={["Fullstack Developer", "Product Management"]}
+                      strings={["Fullstack Developer", "Digital Product Management"]}
                       typeSpeed={60}
                       backSpeed={40}
                       backDelay={1500}
@@ -379,7 +379,7 @@ const handleViewDetails = (experienceId) => {
               
               <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
                 <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                 A fourth-year Informatics Engineering student at Universitas Mercu Buana and <b>Bangkit Academy distinguished graduate</b>, Khansa combines technical expertise (React.js, Laravel, MongoDB) with product management skills (Scrum, Jira, user research). She excels at bridging technology and business, driving innovation in fast-paced corporate environments.
+                 A fourth-year Informatics Engineering student at Universitas Mercu Buana and <b>Bangkit Academy distinguished graduate</b>, Khansa combines technical expertise (React.js, Laravel, MongoDB) with product management skills (Scrum, Jira, Agile). She excels at bridging technology and business, driving innovation in fast-paced corporate environments.
 
                 </p>
               </div>
