@@ -190,7 +190,7 @@ export default function ParagonExperiencePage() {
             <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6">About Paragon Technology & Innovations</h2>
               <p className="text-stone-600 leading-relaxed mb-4 text-sm sm:text-base">
-                Paragon Technology & Innovations is the technology arm of Paragon Corp, one of Indonesia's leading consumer goods companies. The Technology Solutions Unit focuses on developing digital solutions that optimize operations, enhance supply chain visibility, and drive business transformation across manufacturing and distribution networks.
+                Paragon Technology & Innovations is the technology arm of Paragon Corp, one of Indonesia&apos;s leading consumer goods companies. The Technology Solutions Unit focuses on developing digital solutions that optimize operations, enhance supply chain visibility, and drive business transformation across manufacturing and distribution networks.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-stone-500 space-y-1 sm:space-y-0">
                 <span>• Parent: Paragon Corp</span>
