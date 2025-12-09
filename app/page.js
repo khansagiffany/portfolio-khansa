@@ -23,38 +23,48 @@ const Portfolio = () => {
     resume: "https://khansai.vercel.app/"
   };
 
-  const experiences = [
-    {
-      id: 1,
-      company: "Telkom Indonesia",
-      position: "Fullstack Developer",
-      duration: "Feb - Aug 2025",
-      location: "Telkom Landmark Tower, Jakarta",
-      description: "Developed AI chatbots for internal use, handling both frontend and backend tasks using React, Laravel, etc. Collaborated with cross-functional teams to improve automation and internal workflows.",
-      logo: "https://www.telkom.co.id/minio/show/data/image_upload/page/1594112895830_compress_PNG%20Icon%20Telkom.png",
-      skills: ["React.js", "Laravel", "Python", "MongoDB", "Docker", "Postman", "Git", "CI/CD", "AI Chatbot Development"]
-    },
-    {
-      id: 2,
-      company: "Bangkit Academy by Google, GoTo, and Traveloka",
-      position: "Mobile Development Cohort",
-      duration: "Sept 2024 - Jan 2025",
-      location: "Jakarta, Indonesia",
-      description: "Built Android apps using Kotlin, integrated with ML models and APIs. Completed over 900 hours of learning and consistently earned 5-star ratings. Achieved Android Developer Expert certification after advanced training.",
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=2147483647&v=beta&t=oWNWz9O6b8rrBzaHIYm0P8JDa0hYPcNOJcPJMa_jpcY",
-      skills: ["Kotlin", "Android Studio", "Machine Learning", "Firebase", "API Integration"]
-    },
-    {
-      id: 3,
-      company: "PT Artha Nusa Realty",
-      position: "Data Administrator",
-      duration: "2022 - 2025",
-      location: "Jakarta, Indonesia",
-      description: "Managed customer data cleaning and validation processes, created property contracts and agreements, and maintained accurate database records for real estate transactions with 75% data accuracy improvement.",
-      logo: "https://cdn2.vectorstock.com/i/1000x1000/67/96/apartment-building-logo-design-inspiration-vector-29706796.jpg",
-      skills: ["Microsoft Excel", "Data Entry", "Database Management", "Contract Management"]
-    }
-  ];
+const experiences = [
+  {
+    id: 1,
+    company: "PT Paragon Technology and Innovation",
+    position: "IT Product Management",
+    duration: "Nov 2025 - Present",
+    location: "Jakarta, Indonesia",
+    description: "Driving the end-to-end development of Heron, a digital warehouse management platform improving inventory accuracy and operational visibility. Leading Scrum ceremonies, managing PRD/FSD documentation, and coordinating with stakeholders and engineering teams. Overseeing product roadmap and sprint execution in Jira to ensure timely, high-quality feature releases.",
+    logo: "img/paragoncorp_logo.jpeg",
+    skills: ["Jira", "Scrum", "Product Documentation", "Agile", "Warehouse Management Systems"]
+  },
+  {
+    id: 2,
+    company: "Telkom Indonesia",
+    position: "Fullstack Developer",
+    duration: "Feb - Aug 2025",
+    location: "Telkom Landmark Tower, Jakarta",
+    description: "Developed AI chatbots for internal use, handling both frontend and backend tasks using React, Laravel, etc. Collaborated with cross-functional teams to improve automation and internal workflows.",
+    logo: "https://www.telkom.co.id/minio/show/data/image_upload/page/1594112895830_compress_PNG%20Icon%20Telkom.png",
+    skills: ["React.js", "Laravel", "Python", "MongoDB", "Docker", "Postman", "Git", "CI/CD", "AI Chatbot Development"]
+  },
+  {
+    id: 3,
+    company: "Bangkit Academy by Google, GoTo, and Traveloka",
+    position: "Mobile Development Cohort",
+    duration: "Sept 2024 - Jan 2025",
+    location: "Jakarta, Indonesia",
+    description: "Built Android apps using Kotlin, integrated with ML models and APIs. Completed over 900 hours of learning and consistently earned 5-star ratings. Achieved Android Developer Expert certification after advanced training.",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQGVomgVddrtBA/company-logo_200_200/B56ZWOrFbWGUAM-/0/1741855415072/bangkit_academy_logo?e=2147483647&v=beta&t=oWNWz9O6b8rrBzaHIYm0P8JDa0hYPcNOJcPJMa_jpcY",
+    skills: ["Kotlin", "Android Studio", "Machine Learning", "Firebase", "API Integration"]
+  },
+  {
+    id: 4,
+    company: "PT Artha Nusa Realty",
+    position: "Data Administrator",
+    duration: "2022 - 2025",
+    location: "Jakarta, Indonesia",
+    description: "Managed customer data cleaning and validation processes, created property contracts and agreements, and maintained accurate database records for real estate transactions with 75% data accuracy improvement.",
+    logo: "https://cdn2.vectorstock.com/i/1000x1000/67/96/apartment-building-logo-design-inspiration-vector-29706796.jpg",
+    skills: ["Microsoft Excel", "Data Entry", "Database Management", "Contract Management"]
+  }
+];
 
   const projects = [
     {
@@ -139,19 +149,22 @@ const Portfolio = () => {
   };
 
   // Handler untuk navigasi ke halaman detail berdasarkan ID
-  const handleViewDetails = (experienceId) => {
-    switch(experienceId) {
-      case 1: // Telkom Indonesia
-        router.push('/experiences/telkom');
-        break;
-      case 2: // Bangkit Academy  
-        router.push('/experiences/bangkit');
-        break;
-      case 3: // Artha Nusa
-        router.push('/experiences/artha-nusa');
-        break;
-    }
-  };
+const handleViewDetails = (experienceId) => {
+  switch(experienceId) {
+    case 1: // Paragon
+      router.push('/experiences/paragon');
+      break;
+    case 2: // Telkom Indonesia
+      router.push('/experiences/telkom');
+      break;
+    case 3: // Bangkit Academy  
+      router.push('/experiences/bangkit');
+      break;
+    case 4: // Artha Nusa
+      router.push('/experiences/artha-nusa');
+      break;
+  }
+};
 
   const handleViewEducationDetails = (eduId) => {
     switch(eduId) {
@@ -287,7 +300,7 @@ const Portfolio = () => {
                 <div className="bg-white/40 backdrop-blur-xl p-3 rounded-xl border border-white/60 shadow-xl inline-block">
                   <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-stone-700 to-stone-900 bg-clip-text text-transparent">
                     <ReactTyped
-                      strings={["Fullstack Developer", "AI Engineer"]}
+                      strings={["Fullstack Developer", "Product Management"]}
                       typeSpeed={60}
                       backSpeed={40}
                       backDelay={1500}
@@ -360,17 +373,14 @@ const Portfolio = () => {
               {/* Bio Cards with Glass */}
               <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
                 <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                  Khansa Putri Giffany is a Fullstack Developer at Telkom Indonesia, specializing in AI chatbot development for
-                  internal use. A fourth year Informatics Engineering student at Universitas Mercu Buana, she previously led the
-                  EYECON eye health app project at Bangkit Academy, graduating with distinction.
+                 Khansa Putri Giffany is an <b>IT Product Manager at Paragon Technology & Innovations</b>, managing the development of Heron, a digital warehouse management solution optimizing inventory operations. Previously a <b>Fullstack Developer at Telkom Indonesia</b>, she built CIAMIC, an AI chatbot achieving 64% adoption growth among 25,000+ employees and earning Board of Directors endorsement.
                 </p>
               </div>
               
               <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
                 <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                  With expertise in project management, software development, and AI integration, Khansa thrives in fast-paced 
-                  corporate environments. Her ability to adapt quickly and collaborate effectively makes her a valuable asset in 
-                  dynamic teams, driving innovation and efficiency.
+                 A fourth-year Informatics Engineering student at Universitas Mercu Buana and <b>Bangkit Academy distinguished graduate</b>, Khansa combines technical expertise (React.js, Laravel, MongoDB) with product management skills (Scrum, Jira, user research). She excels at bridging technology and business, driving innovation in fast-paced corporate environments.
+
                 </p>
               </div>
 
@@ -402,23 +412,28 @@ const Portfolio = () => {
                 <div className="space-y-5">
                   {[
                     { 
+                      category: "Product Management", 
+                      skills: ["Agile/Scrum", "Product Roadmap", "Sprint Ceremonies", "WMS", "PRD/FSD"],
+                      gradient: "from-blue-700 to-blue-900"
+                    },
+{ 
                       category: "Frontend", 
-                      skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "SCSS", "Bootstrap", "Flutter"],
+                      skills: ["React.js", "TypeScript", "Tailwind CSS", "Bootstrap", "Flutter"],
                       gradient: "from-blue-500 to-cyan-500"
                     },
                     { 
                       category: "Backend", 
-                      skills: ["Node.js", "Laravel", "PHP", "MySQL", "PostgreSQL", "MongoDB"],
+                      skills: ["Node.js", "Laravel", "PHP", "MySQL", "MongoDB"],
                       gradient: "from-green-500 to-emerald-500"
                     },
                     { 
                       category: "Programming & Data", 
-                      skills: ["Python", "R", "C/C++", "Java", "SQL", "Pandas", "TensorFlow", "Keras"],
+                      skills: ["Python", "R", "C++", "Java", "SQL"],
                       gradient: "from-purple-500 to-pink-500"
                     },
                     { 
                       category: "Tools & Platforms", 
-                      skills: ["Git", "Docker", "Postman", "VS Code", "Figma", "Firebase", "pgAdmin", "Microsoft Office"],
+                      skills: ["Git", "Docker", "VS Code", "Figma", "Microsoft Office"],
                       gradient: "from-orange-500 to-red-500"
                     }
                   ].map((skillGroup, index) => (
