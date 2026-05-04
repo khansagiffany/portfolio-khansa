@@ -96,7 +96,7 @@ export default function ArthaNusaExperiencePage() {
             </div>
             <div className="flex-grow w-full sm:w-auto">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-800 mb-2">
-                Data Administrator
+                Digital Operations
               </h1>
               <p className="text-lg sm:text-xl text-[#1e40af] font-semibold mb-2">PT Artha Nusa Realty</p>
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-stone-600 text-sm sm:text-base">
@@ -152,7 +152,7 @@ export default function ArthaNusaExperiencePage() {
             <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6">Role Overview</h2>
               <p className="text-stone-600 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
-                As a Data Administrator at PT Artha Nusa Realty, I was responsible for maintaining the integrity and organization of customer data, managing contract documentation, and ensuring accurate record-keeping for all real estate transactions. My role was crucial in supporting the companys operations through meticulous data management and administrative excellence.
+                As a Digital Operations Officer at PT Artha Nusa Realty, I was responsible for maintaining the integrity and organization of customer data, managing contract documentation, and ensuring accurate record-keeping for all real estate transactions. My role was crucial in supporting the companys operations through meticulous data management and administrative excellence.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">

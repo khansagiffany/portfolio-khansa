@@ -10,11 +10,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata = {
   metadataBase: new URL("https://portfolio-khansa.vercel.app"),
-  title: "Khansa Putri Giffany — Full Stack Developer Portfolio",
+  title: "Khansa Putri Giffany — Portfolio",
   description:
-    "Portfolio of Khansa Putri Giffany, a Full Stack Developer passionate about building modern web apps, dashboards, and digital solutions.",
+    "Portfolio of Khansa Putri Giffany, a Product Manager passionate about building modern web apps, dashboards, and digital solutions.",
   openGraph: {
-    title: "Khansa Putri Giffany — Full Stack Developer",
+    title: "Khansa Putri Giffany — Portfolio",
     description:
       "Explore my projects, skills, and experiences in web development.",
     url: "https://portfolio-khansa.vercel.app",
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Khansa Putri Giffany — Full Stack Developer",
+    title: "Khansa Putri Giffany — Portfolio",
     description: "Explore my portfolio and web projects.",
     images: ["/og-image.png"],
   },

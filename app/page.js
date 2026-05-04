@@ -26,8 +26,8 @@ const Portfolio = () => {
 const experiences = [
   {
     id: 1,
-    company: "PT Paragon Technology and Innovation",
-    position: "IT Product Management",
+    company: "PT Paragon Technology and Innovation (ParagonCorp)",
+    position: "Product Manager",
     duration: "Nov 2025 - Present",
     location: "Jakarta, Indonesia",
     description: "Driving the end-to-end development of Heron, a digital warehouse management platform improving inventory accuracy and operational visibility. Leading Scrum ceremonies, managing PRD/FSD documentation, and coordinating with stakeholders and engineering teams. Overseeing product roadmap and sprint execution in Jira to ensure timely, high-quality feature releases.",
@@ -57,7 +57,7 @@ const experiences = [
   {
     id: 4,
     company: "PT Artha Nusa Realty",
-    position: "Data Administrator",
+    position: "Digital Operations",
     duration: "2022 - 2025",
     location: "Jakarta, Indonesia",
     description: "Managed customer data cleaning and validation processes, created property contracts and agreements, and maintained accurate database records for real estate transactions with 75% data accuracy improvement.",
@@ -66,19 +66,29 @@ const experiences = [
   }
 ];
 
-  const projects = [
+const projects = [
     {
       id: 1,
+      title: "Heron - Warehouse Management System",
+      description: "A centralized Warehouse Management System designed to streamline the entire supply chain. Replaces manual guesswork with system-driven workflows, giving real-time visibility and control over warehouse operations. Serving 3K+ active users with 100% uptime.",
+      image: "/img/Heron0.jpg",
+      technologies: ["Product Manager"],
+      github: null,
+      demo: "https://heron-wms.com",
+      year: "2026"
+    },
+    {
+      id: 2,
       title: "CIAMIC - Chat Intelligent Assistant for Media Interaction & Communication",
       description: "AI-powered chatbot for TelkomGroup employees to access internal product information, HR resources, KPIs, and secure company data. Improved adoption by 64% through user research and continuous iteration. Built for both desktop and mobile with responsive design.",
       image: "/img/ciamic.png",
       technologies: ["React.js", "Laravel", "MongoDB"],
-      github: "https://github.com/khansagiffany/ciamic", 
-      demo: "https://ciamic-trf.itdri.id/", 
+      github: "https://github.com/khansagiffany/ciamic",
+      demo: "https://ciamic-trf.itdri.id/",
       year: "2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "Digimate - Personal Tracker for Interns",
       description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management.",
       image: "/img/digimate.jpg",
@@ -88,7 +98,7 @@ const experiences = [
       year: "2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "EYECON - Eye Health Mobile App",
       description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
       image: "/img/eyecon.jpg",
@@ -97,16 +107,6 @@ const experiences = [
       demo: "https://eyecon-demo.com",
       year: "2024"
     },
-    {
-      id: 4,
-      title: "CrimsonDash Sales Dashboard",
-      description: "Comprehensive sales analytics for 2022-2024 with advanced filtering, interactive charts, and year-over-year growth insights.",
-      image: "/img/CrimsonDashmain.png",
-      technologies: ["TypeScript", "Data Visualization"],
-      github: "https://github.com/khansagiffany/CrimsonDash",
-      demo: "https://crimson-dash.vercel.app/",
-      year: "2025"
-    }
   ];
 
   const education = [
@@ -180,23 +180,23 @@ const handleViewDetails = (experienceId) => {
   };
 
   const handleViewProject = (projectId) => {
-    switch(projectId) {
-      case 1: //ciamic
-        router.push('/projects/ciamic');
-        break;
-      case 2: //digimate
-        router.push('/projects/digimate');
-        break;
-      case 3: //eyecon
-        router.push('/projects/eyecon');
-        break;
-      case 4: //crimson
-        router.push('/projects/crimson');
-        break;
-      default:
-        console.log('Projects detail page not found');
-    }
-  };
+  switch(projectId) {
+    case 1: //heron
+      router.push('/projects/heron');
+      break;
+    case 2: //ciamic
+      router.push('/projects/ciamic');
+      break;
+    case 3: //digimate
+      router.push('/projects/digimate');
+      break;
+    case 4: //eyecon
+      router.push('/projects/eyecon');
+      break;
+    default:
+      console.log('Projects detail page not found');
+  }
+};
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800">
@@ -300,7 +300,7 @@ const handleViewDetails = (experienceId) => {
                 <div className="bg-white/40 backdrop-blur-xl p-3 rounded-xl border border-white/60 shadow-xl inline-block">
                   <h2 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-stone-700 to-stone-900 bg-clip-text text-transparent">
                     <ReactTyped
-                      strings={["Fullstack Developer", "Digital Product Management"]}
+                      strings={["Fullstack Developer", "Product Manager"]}
                       typeSpeed={60}
                       backSpeed={40}
                       backDelay={1500}
@@ -373,14 +373,13 @@ const handleViewDetails = (experienceId) => {
               {/* Bio Cards with Glass */}
               <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
                 <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                 Khansa Putri Giffany is an <b>IT Product Manager at Paragon Technology & Innovations</b>, managing the development of Heron, a digital warehouse management solution optimizing inventory operations. Previously a <b>Fullstack Developer at Telkom Indonesia</b>, she built CIAMIC, an AI chatbot achieving 64% adoption growth among 25,000+ employees and earning Board of Directors endorsement.
+                 Khansa Putri Giffany is a <b>Product Manager at Paragon Technology & Innovations (ParagonCorp)</b>, managing the development Heron, a digital warehouse management solution optimizing inventory operations with 60-minute average order fulfillment lead time, 100% system uptime, and 0.40s load time performance
                 </p>
               </div>
               
               <div className="bg-white/40 backdrop-blur-xl p-6 rounded-2xl border border-white/60 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]">
                 <p className="text-lg text-stone-600 leading-relaxed text-justify">
-                 A fourth-year Informatics Engineering student at Universitas Mercu Buana and <b>Bangkit Academy distinguished graduate</b>, Khansa combines technical expertise (React.js, Laravel, MongoDB) with product management skills (Scrum, Jira, Agile). She excels at bridging technology and business, driving innovation in fast-paced corporate environments.
-
+                 Previously a <b>Fullstack Developer at Telkom Indonesia</b>, she built CIAMIC, an AI chatbot achieving 64% adoption growth among 25,000+ employees and earning Board of Directors endorsement. Khansa combines technical expertise with product management skills. She excels at bridging technology and business, <b>driving innovation in fast-paced corporate environments.</b>
                 </p>
               </div>
 
@@ -389,7 +388,7 @@ const handleViewDetails = (experienceId) => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#800000] to-rose-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                   <div className="relative text-center p-6 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl hover:scale-105 transition-transform">
-                    <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-[#800000] to-rose-600 bg-clip-text">2+</div>
+                    <div className="text-3xl font-bold text-transparent bg-gradient-to-r from-[#800000] to-rose-600 bg-clip-text">4+</div>
                     <div className="text-stone-600 font-medium mt-1">Years Experience</div>
                   </div>
                 </div>

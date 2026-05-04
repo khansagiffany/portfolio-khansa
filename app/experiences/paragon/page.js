@@ -95,7 +95,7 @@ export default function ParagonExperiencePage() {
             </div>
             <div className="flex-grow w-full sm:w-auto">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-800 mb-2">
-                IT Product Management
+                Product Manager
               </h1>
               <p className="text-lg sm:text-xl text-blue-700 font-semibold mb-2">Paragon Technology & Innovations</p>
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-stone-600 text-sm sm:text-base">
@@ -151,7 +151,7 @@ export default function ParagonExperiencePage() {
             <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6">Role Overview</h2>
               <p className="text-stone-600 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
-                As an IT Product Management Intern at Paragon Technology & Innovations, I manage the development of Heron, a digital warehouse management solution designed to optimize inventory operations and enhance visibility across factories and distribution centers. I bridge business needs with technical execution through agile methodologies and data-driven decision making.
+                As a Product Manager Intern at Paragon Technology & Innovations, I manage the development of Heron, a digital warehouse management solution designed to optimize inventory operations and enhance visibility across factories and distribution centers. I bridge business needs with technical execution through agile methodologies and data-driven decision making.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
