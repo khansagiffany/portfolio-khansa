@@ -113,7 +113,7 @@ const UBEducationDetail = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
             <div className="flex-shrink-0">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Logo_Universitas_Brawijaya.svg/2036px-Logo_Universitas_Brawijaya.svg.png"
+                src="/img/UB.png"
                 alt="Universitas Brawijaya Logo"
                 className="w-20 h-20 rounded-full border-4 border-green-100 p-2 bg-white"
                 onError={(e) => {
@@ -123,7 +123,7 @@ const UBEducationDetail = () => {
             </div>
             <div className="flex-1">
               <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">
-                Short Course in Statistics
+                Exchange, Summer School Programme in Statistics
               </h1>
               <p className="text-lg text-slate-600 mb-4">Summer School Programme</p>
               <div className="flex flex-wrap items-center gap-4 text-slate-600 mb-4">

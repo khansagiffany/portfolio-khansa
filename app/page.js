@@ -126,10 +126,10 @@ const projects = [
     {
       id: 2,
       institution: "Universitas Brawijaya – Malang, Indonesia",
-      degree: "Short Course (Summer School Programme) in Statistics",
+      degree: "Exchange, Summer School Programme in Statistics",
       duration: "June – Aug 2024",
       gpa: "3.63/4.00",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Logo_Universitas_Brawijaya.svg/2036px-Logo_Universitas_Brawijaya.svg.png",
+      logo: "img/UB.png",
       activities: [
         "12 credits conversion",
         "Proficient in R Studio for statistical tasks"
@@ -138,9 +138,9 @@ const projects = [
   ];
 
   const certificates = [
-    { id: 1, title: "Intermediate Android Application Development", issuer: "Bangkit Academy by Google, GoTo, and Traveloka", year: "2025", image: "/img/Belajar Pengembangan Aplikasi Android Intermediate-images-0.jpg" },
-    { id: 2, title: "Machine Learning for Android", issuer: "Bangkit Academy by Google, GoTo, and Traveloka", year: "2025", image: "img/ML.jpeg" },
-    { id: 3, title: "Database Design & Programming", issuer: "TSA by Komdigi", year: "2024", image: "/img/DB.jpeg" },
+    { id: 1, title: "Google Project Management", issuer: "Google x Coursera", year: "2026", image: "/img/PM1.jpg" },
+    { id: 2, title: "Google AI Essentials", issuer: "Google x Coursera", year: "2026", image: "img/PM.jpeg" },
+    { id: 3, title: "Project Management", issuer: "Komdigi", year: "2026", image: "/img/AI.jpeg" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -930,7 +930,7 @@ const handleViewDetails = (experienceId) => {
               
               {/* Copyright */}
               <p className="text-white/90 text-sm drop-shadow">
-                &copy; 2025 {profile.name}. All rights reserved.
+                &copy; 2026 {profile.name}. All rights reserved.
               </p>
             </div>
           </div>

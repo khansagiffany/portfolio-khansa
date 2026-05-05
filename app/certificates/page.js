@@ -5,75 +5,96 @@ import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function CertificatesPage() {
-      const router = useRouter();
+  const router = useRouter();
   const certificates = [
     {
       id: 1,
+      image: "/img/PM1.jpg",
+      title: "Google Project Management",
+      issuer: "Google x Coursera",
+      year: "2026"
+    },
+    {
+      id: 2,
+      image: "/img/PM.jpeg",
+      title: "Google AI Essentials",
+      issuer: "Google x Coursera",
+      year: "2026"
+    },
+    {
+      id: 3,
+      image: "/img/AI.jpeg",
+      title: "Project Management",
+      issuer: "Komdigi",
+      year: "2026"
+    },
+    {
+      id: 4,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0001.jpg",
       title: "Internship @ Telkom"
     },
     {
-      id: 2,
+      id: 5,
       image: "/img/Belajar Pengembangan Aplikasi Android Intermediate-images-0.jpg",
       title: "Intermediate Android Development"
     },
     {
-      id: 3,
+      id: 6,
       image: "img/ML.jpeg",
       title: "Machine Learning for Android"
     },
     {
-      id: 4,
+      id: 7,
       image: "/img/DB.jpeg",
       title: "Database Design & Programming"
     },
     {
-      id: 5,
+      id: 8,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0020.jpg",
       title: "Java Programming"
     },
     {
-      id: 6,
+      id: 9,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0006.jpg",
       title: "Artificial Intelligence"
     },
     {
-      id: 7,
+      id: 10,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0009.jpg",
       title: "Programming With Kotlin"
     },
     {
-      id: 8,
+      id: 11,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0012.jpg",
       title: "Javascript"
     },
     {
-      id: 9,
+      id: 12,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0013.jpg",
       title: "UI/UX Design"
     },
     {
-      id: 10,
+      id: 13,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0014.jpg",
       title: "Web Programming"
     },
     {
-      id: 11,
+      id: 14,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0017.jpg",
       title: "Database Design"
     },
     {
-      id: 12,
+      id: 15,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0015.jpg",
       title: "Google HackFest 2025"
     },
     {
-      id: 13,
+      id: 16,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0016.jpg",
       title: "Database Programming - SQL"
     },
     {
-      id: 14,
+      id: 17,
       image: "img/certificates/CERTIFICATES_Khansa Putri Giffany (1)_page-0019.jpg",
       title: "Java Foundations"
     }
@@ -85,16 +106,16 @@ export default function CertificatesPage() {
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100">
       {/* Sticky Header */}
       <div className="sticky top-0 z-40 bg-red-900/95 backdrop-blur-sm border-b border-red-800">
-      <div className="container mx-auto px-2 py-3">
-        <button
-          onClick={() => router.back()}
-          className="inline-flex items-center text-white hover:text-red-200 transition-colors duration-200 font-medium"
-        >
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          <span>Back</span>
-        </button>
+        <div className="container mx-auto px-2 py-3">
+          <button
+            onClick={() => router.back()}
+            className="inline-flex items-center text-white hover:text-red-200 transition-colors duration-200 font-medium"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            <span>Back</span>
+          </button>
+        </div>
       </div>
-    </div>
 
       {/* Header */}
       <div className="bg-gradient-to-r from-red-900 to-red-800 text-white py-12">
@@ -117,7 +138,7 @@ export default function CertificatesPage() {
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer overflow-hidden border border-red-100"
               onClick={() => setSelectedCertificate(cert)}
             >
-              {/* Image Container with 3:4 aspect ratio */}
+              {/* Image Container with 4:3 aspect ratio */}
               <div className="relative overflow-hidden bg-red-50">
                 <div className="aspect-[4/3] relative">
                   <img
@@ -128,12 +149,15 @@ export default function CertificatesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
-              
+
               {/* Title */}
               <div className="p-4">
                 <h3 className="font-semibold text-red-900 text-center text-sm md:text-base group-hover:text-red-700 transition-colors duration-300">
                   {cert.title}
                 </h3>
+                {cert.issuer && (
+                  <p className="text-xs text-slate-500 text-center mt-1">{cert.issuer} · {cert.year}</p>
+                )}
               </div>
             </div>
           ))}
@@ -142,11 +166,11 @@ export default function CertificatesPage() {
 
       {/* Modal for enlarged view */}
       {selectedCertificate && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedCertificate(null)}
         >
-          <div 
+          <div
             className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -167,6 +191,9 @@ export default function CertificatesPage() {
               <h2 className="text-2xl font-bold text-red-900 text-center">
                 {selectedCertificate.title}
               </h2>
+              {selectedCertificate.issuer && (
+                <p className="text-center text-slate-500 mt-1">{selectedCertificate.issuer} · {selectedCertificate.year}</p>
+              )}
             </div>
           </div>
         </div>
