@@ -19,8 +19,8 @@ const Portfolio = () => {
     email: "khansaagiffany@gmail.com",
     phone: " ",
     linkedin: "https://www.linkedin.com/in/khansa-putri-giffany/",
-    github: "https://github.com/khansagiffany",
-    resume: "https://khansai.vercel.app/"
+    github: "https://github.com/khansagiffany"
+    //resume: "https://khansai.vercel.app/"
   };
 
 
@@ -341,7 +341,7 @@ const handleViewDetails = (experienceId) => {
                 href={profile.resume}
                 className="flex items-center justify-center bg-gradient-to-r from-[#800000] to-rose-700 text-white px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 overflow-hidden border border-white/20 text-sm shadow-lg"
               >
-                <span className="relative z-10">khansAI</span>
+                <span className="relative z-10">khansAI (Currently Unavailable)</span>
               </a>
               
               <button 
