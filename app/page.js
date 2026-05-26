@@ -23,9 +23,20 @@ const Portfolio = () => {
     resume: "https://khansai.vercel.app/"
   };
 
+
 const experiences = [
   {
     id: 1,
+    company: "Cermati Fintech Group",
+    position: "Product Manager Officer",
+    duration: "2026 - Present",
+    location: "Jakarta, Indonesia",
+    description: "Worked as a full-time Product Manager, supporting end-to-end product development within the fast paced fintech ecosystem, contributing to feature discovery, requirement gathering, and cross-functional alignment. Collaborated with engineering and design teams to define user stories, track sprint progress, and ensure product delivery aligned with business objectives.",
+    skills: ["Product Discovery", "User Stories", "Agile", "Fintech"],
+    logo: "img/cermatilogo.jpg"
+  },
+  {
+    id: 2,
     company: "PT Paragon Technology and Innovation (ParagonCorp)",
     position: "Product Manager",
     duration: "Nov 2025 - Present",
@@ -35,7 +46,7 @@ const experiences = [
     skills: ["Jira", "Scrum", "Product Documentation", "Agile", "Warehouse Management Systems"]
   },
   {
-    id: 2,
+    id: 3,
     company: "Telkom Indonesia",
     position: "Fullstack Developer",
     duration: "Feb - Aug 2025",
@@ -45,7 +56,7 @@ const experiences = [
     skills: ["React.js", "Laravel", "Python", "MongoDB", "Docker", "Postman", "Git", "CI/CD", "AI Chatbot Development"]
   },
   {
-    id: 3,
+    id: 4,
     company: "Bangkit Academy by Google, GoTo, and Traveloka",
     position: "Mobile Development Cohort",
     duration: "Sept 2024 - Jan 2025",
@@ -55,7 +66,7 @@ const experiences = [
     skills: ["Kotlin", "Android Studio", "Machine Learning", "Firebase", "API Integration"]
   },
   {
-    id: 4,
+    id: 5,
     company: "PT Artha Nusa Realty",
     position: "Digital Operations",
     duration: "2022 - 2025",
@@ -148,19 +159,22 @@ const projects = [
     setIsMenuOpen(false);
   };
 
-  // Handler untuk navigasi ke halaman detail berdasarkan ID
+
 const handleViewDetails = (experienceId) => {
   switch(experienceId) {
-    case 1: // Paragon
+    case 2:
       router.push('/experiences/paragon');
       break;
-    case 2: // Telkom Indonesia
+    case 1: // Cermati
+      router.push('/experiences/cermati');
+      break;
+    case 3:
       router.push('/experiences/telkom');
       break;
-    case 3: // Bangkit Academy  
+    case 4:
       router.push('/experiences/bangkit');
       break;
-    case 4: // Artha Nusa
+    case 5:
       router.push('/experiences/artha-nusa');
       break;
   }
