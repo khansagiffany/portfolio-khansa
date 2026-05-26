@@ -28,7 +28,7 @@ const experiences = [
   {
     id: 1,
     company: "Cermati Fintech Group",
-    position: "Product Manager Officer",
+    position: "Product Manager",
     duration: "2026 - Present",
     location: "Jakarta, Indonesia",
     description: "Worked as a full-time Product Manager, supporting end-to-end product development within the fast paced fintech ecosystem, contributing to feature discovery, requirement gathering, and cross-functional alignment. Collaborated with engineering and design teams to define user stories, track sprint progress, and ensure product delivery aligned with business objectives.",
