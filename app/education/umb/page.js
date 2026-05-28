@@ -1,75 +1,81 @@
 "use client";
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { ArrowLeft, GraduationCap, Calendar, MapPin, Award, BookOpen, Users, Trophy, Lightbulb, TrendingUp, Star, Download, ExternalLink } from 'lucide-react';
+import { ArrowLeft, GraduationCap, Calendar, MapPin, Award, BookOpen, Users, Trophy, Lightbulb, TrendingUp, Star, Download } from 'lucide-react';
 
 const EducationDetail = () => {
-  const router = useRouter();
   const [activeTab, setActiveTab] = useState('overview');
 
   // Navigate back function
   const handleBackToMain = () => {
-    router.back();
+    window.history.back();
   };
 
-  // Sample transcript data
   const transcriptData = [
-      { semester: 1, courses: [
-          { code: "F062100001", name: "Computer Security Fundamentals", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "F062100002", name: "Statistics and Probability", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "U002100001", name: "Islamic Religious Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-          { code: "U002100014", name: "English I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-          { code: "W152100001", name: "Calculus", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100002", name: "Algorithms and Programming", credits: 3, grade: "B", points: 3.00, total: 9.00 },
-          { code: "W152100003", name: "Database Systems", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
-      ]},
-      { semester: 2, courses: [
-          { code: "U002100007", name: "Pancasila", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
-          { code: "U002100015", name: "English II", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-          { code: "W152100004", name: "Discrete Mathematics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100006", name: "Data Structures", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100007", name: "Algorithm and Data Structures Lab", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100008", name: "Computer Architecture", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
-          { code: "W152100009", name: "CCNA R&S 1", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-      ]},
-      { semester: 3, courses: [
-          { code: "F062100004", name: "Software Engineering", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "F062100006", name: "PL/SQL Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110001", name: "Advanced Algorithms", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110002", name: "Introduction to Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100005", name: "Professional Communication and Ethics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100010", name: "Linear Algebra", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
-          { code: "W152100011", name: "Operating Systems", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100012", name: "Introduction to Artificial Intelligence", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-      ]},
-      { semester: 4, courses: [
-          { code: "F062100003", name: "Object-Oriented Analysis", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110010", name: "2D/3D Modeling", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110011", name: "Image Processing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "U002100008", name: "Civics", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
-          { code: "U002100010", name: "Anti-Corruption and Ethics Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-          { code: "W152100016", name: "Mobile Programming", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
-          { code: "W152100023", name: "Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "W152100026", name: "Cloud Computing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-      ]},
-      { semester: 5, courses: [
-          { code: "M062100017", name: "Natural Language Processing (NLP)", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "M062100053", name: "Mathematical Tools for Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "M062100066", name: "Object-Oriented Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "M062100067", name: "Introduction to Data Mining", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "M062100087", name: "Human-Computer Interaction", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "M062100088", name: "Enterprise Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "U002100009", name: "Indonesian Language", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-          { code: "U002100011", name: "Entrepreneurship I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
-      ]},
-      { semester: 6, courses: [
-          { code: "F062100007", name: "English for Computer I", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110005", name: "Machine Learning", credits: 3, grade: "A", points: 4.00, total: 12.00 },
-          { code: "P152110006", name: "Advanced Data Mining", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
-          { code: "P152110008", name: "Smart Web Programming", credits: 4, grade: "A", points: 4.00, total: 16.00 },
-          { code: "W152100020", name: "Internship", credits: 4, grade: "A", points: 4.00, total: 16.00 },
-      ]},
-    ];
+    { semester: 1, courses: [
+      { code: "F062100001", name: "Computer Security Fundamentals", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "F062100002", name: "Statistics and Probability", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "U002100001", name: "Islamic Religious Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      { code: "U002100014", name: "English I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      { code: "W152100001", name: "Calculus", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100002", name: "Algorithms and Programming", credits: 3, grade: "B", points: 3.00, total: 9.00 },
+      { code: "W152100003", name: "Database Systems", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+    ]},
+    { semester: 2, courses: [
+      { code: "U002100007", name: "Pancasila", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
+      { code: "U002100015", name: "English II", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      { code: "W152100004", name: "Discrete Mathematics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100006", name: "Data Structures", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100007", name: "Algorithm and Data Structures Lab", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100008", name: "Computer Architecture", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+      { code: "W152100009", name: "CCNA R&S 1", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+    ]},
+    { semester: 3, courses: [
+      { code: "F062100004", name: "Software Engineering", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "F062100006", name: "PL/SQL Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110001", name: "Advanced Algorithms", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110002", name: "Introduction to Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100005", name: "Professional Communication and Ethics", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100010", name: "Linear Algebra", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+      { code: "W152100011", name: "Operating Systems", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100012", name: "Introduction to Artificial Intelligence", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+    ]},
+    { semester: 4, courses: [
+      { code: "F062100003", name: "Object-Oriented Analysis", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110010", name: "2D/3D Modeling", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110011", name: "Image Processing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "U002100008", name: "Civics", credits: 2, grade: "B+", points: 3.50, total: 7.00 },
+      { code: "U002100010", name: "Anti-Corruption and Ethics Education", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      { code: "W152100016", name: "Mobile Programming", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+      { code: "W152100023", name: "Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152100026", name: "Cloud Computing", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+    ]},
+    { semester: 5, courses: [
+      { code: "M062100017", name: "Natural Language Processing (NLP)", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "M062100053", name: "Mathematical Tools for Data Science", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "M062100066", name: "Object-Oriented Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "M062100067", name: "Introduction to Data Mining", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "M062100087", name: "Human-Computer Interaction", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "M062100088", name: "Enterprise Web Programming", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "U002100009", name: "Indonesian Language", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+      { code: "U002100011", name: "Entrepreneurship I", credits: 2, grade: "A", points: 4.00, total: 8.00 },
+    ]},
+    { semester: 6, courses: [
+      { code: "F062100007", name: "English for Computer I", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110005", name: "Machine Learning", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "P152110006", name: "Advanced Data Mining", credits: 3, grade: "B+", points: 3.50, total: 10.50 },
+      { code: "P152110008", name: "Smart Web Programming", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+      { code: "W152100020", name: "Internship", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+    ]},
+    { semester: 7, courses: [
+      { code: "F062500003", name: "Generative AI", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152500001", name: "Research Methodology", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+      { code: "W152500027", name: "Deep Learning", credits: 3, grade: "A", points: 4.00, total: 12.00 },
+      { code: "W152500037", name: "Capstone Project", credits: 5, grade: "A", points: 4.00, total: 20.00 },
+    ]},
+    { semester: 8, courses: [
+      { code: "W152600001", name: "Thesis", credits: 4, grade: "A", points: 4.00, total: 16.00 },
+    ]},
+  ];
 
   const activities = [
     {
@@ -96,16 +102,22 @@ const EducationDetail = () => {
   ];
 
   const academicHighlights = [
-    { label: "Current GPA", value: "3.90/4.00", color: "text-green-600" },
+    { label: "GPA", value: "3.92/4.00", color: "text-green-600" },
     { label: "Major", value: "Informatics Engineering", color: "text-blue-600" },
-    { label: "Expected Graduation", value: "2026", color: "text-purple-600" },
-    { label: "Total Credits", value: "138 Credits", color: "text-orange-600" }
+    { label: "Graduation", value: "2026", color: "text-purple-600" },
+    { label: "Total Credits", value: "144 Credits", color: "text-orange-600" }
   ];
 
   const skills = [
-    "Programming Languages", "Software Engineering", "Web Development", 
-    "Mobile Development", "Machine Learning", "Database Management",
-    "Cloud Computing", "Cybersecurity", "Project Management"
+    "Product Management",
+    "Product Lifecycle",
+    "Software Engineering",
+    "Web Development",
+    "Mobile Development",
+    "Machine Learning & AI",
+    "Data Science",
+    "Cloud Computing",
+    "Cybersecurity",
   ];
 
   const calculateSemesterGPA = (courses) => {
@@ -128,7 +140,7 @@ const EducationDetail = () => {
       <header className="bg-white/80 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <button 
+            <button
               onClick={handleBackToMain}
               className="flex items-center text-stone-600 hover:text-[#800000] transition-colors"
             >
@@ -136,7 +148,7 @@ const EducationDetail = () => {
               <span className="text-sm sm:text-base">Back</span>
             </button>
             <div className="flex items-center gap-4">
-              <a 
+              <a
                 href="https://bit.ly/TRANSKRIP_KhansaPG"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -152,12 +164,12 @@ const EducationDetail = () => {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* Education Header */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
             <div className="flex-shrink-0">
-              <img 
+              <img
                 src="https://e7.pngegg.com/pngimages/358/597/png-clipart-mercu-buana-university-of-yogyakarta-master-s-degree-bachelor-s-degree-computer-engineering-miscellaneous-class-thumbnail.png"
                 alt="Universitas Mercu Buana Logo"
                 className="w-20 h-20 rounded-full border-4 border-blue-100"
@@ -222,17 +234,17 @@ const EducationDetail = () => {
 
         {/* Tab Content */}
         <div className="bg-white rounded-b-2xl shadow-lg p-8">
-          
+
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-8">
               <section>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Program Overview</h2>
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  Currently pursuing a Bachelors degree in Informatics Engineering at Universitas Mercu Buana, one of the leading private universities in Indonesia. The program focuses on comprehensive software engineering, data science, and emerging technologies in computer science.
+                  Currently pursuing a Bachelor's degree in Informatics Engineering at Universitas Mercu Buana, one of the leading private universities in Indonesia. The program focuses on comprehensive software engineering, data science, and emerging technologies in computer science.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  Maintaining an exceptional GPA of 3.90/4.00 while actively participating in various academic and research activities. Expected to graduate in 2026 with strong foundations in both theoretical computer science and practical software development.
+                  Maintaining an exceptional GPA of 3.92/4.00 while actively participating in various academic and research activities. Expected to graduate in 2026 with strong foundations in both theoretical computer science and practical software development.
                 </p>
               </section>
 
@@ -274,7 +286,7 @@ const EducationDetail = () => {
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-slate-900">Academic Transcript</h2>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-green-600">3.90</div>
+                  <div className="text-2xl font-bold text-green-600">3.92</div>
                   <div className="text-sm text-slate-600">Cumulative GPA</div>
                 </div>
               </div>
@@ -329,7 +341,7 @@ const EducationDetail = () => {
           {activeTab === 'activities' && (
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Activities & Awards</h2>
-              
+
               {activities.map((activity, index) => (
                 <div key={index} className="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-4">

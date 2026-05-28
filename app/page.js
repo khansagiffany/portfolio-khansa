@@ -30,7 +30,7 @@ const experiences = [
     company: "Cermati Fintech Group",
     position: "Product Manager",
     duration: "May 2026 - Present",
-    location: "Jakarta, Indonesia",
+    location: "Plaza Bank Index, Jakarta",
     description: "Worked as a full-time Product Manager, supporting end-to-end product development within the fast paced fintech ecosystem, contributing to feature discovery, requirement gathering, and cross-functional alignment. Collaborated with engineering and design teams to define user stories, track sprint progress, and ensure product delivery aligned with business objectives.",
     skills: ["Product Discovery", "User Stories", "Agile", "Fintech"],
     logo: "img/cermatilogo.jpg"
@@ -40,7 +40,7 @@ const experiences = [
     company: "PT Paragon Technology and Innovation (ParagonCorp)",
     position: "Product Manager",
     duration: "Nov 2025 - Apr 2026",
-    location: "Jakarta, Indonesia",
+    location: "Paragon Head Office, Jakarta",
     description: "Driving the end-to-end development of Heron, a digital warehouse management platform improving inventory accuracy and operational visibility. Leading Scrum ceremonies, managing PRD/FSD documentation, and coordinating with stakeholders and engineering teams. Overseeing product roadmap and sprint execution in Jira to ensure timely, high-quality feature releases.",
     logo: "img/paragoncorp_logo.jpeg",
     skills: ["Jira", "Scrum", "Product Documentation", "Agile", "Warehouse Management Systems"]
@@ -100,6 +100,16 @@ const projects = [
     },
     {
       id: 3,
+      title: "DANA Sense - The Invisible Insight Engine",
+      description: "An intelligent, contextual, and invisible in-app analytics engine for DANA. Transforms how DANA listens to users through event-triggered micro-surveys, AI-powered auto-synthesis, and a real-time stakeholder dashboard — reducing time-to-insight from 3 weeks to under 24 hours.",
+      image: "/img/danasense.jpg",
+      technologies: ["Apache Kafka", "NLP / AI Engine", "Microservices", "Data Warehouse"],
+      github: "",
+      demo: "",
+      year: "2025"
+    },
+    {
+      id: 4,
       title: "Digimate - Personal Tracker for Interns",
       description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management.",
       image: "/img/digimate.jpg",
@@ -107,16 +117,6 @@ const projects = [
       github: "https://github.com/khansagiffany/digimate-v2",
       demo: "https://digimate-v2.vercel.app",
       year: "2025"
-    },
-    {
-      id: 4,
-      title: "EYECON - Eye Health Mobile App",
-      description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
-      image: "/img/eyecon.jpg",
-      technologies: ["Kotlin", "Android Studio", "ML"],
-      github: "https://github.com/EYECON-Capstone",
-      demo: "https://eyecon-demo.com",
-      year: "2024"
     },
   ];
 
@@ -126,7 +126,7 @@ const projects = [
       institution: "Universitas Mercu Buana – West Jakarta, Indonesia",
       degree: "Bachelor of Informatics Engineering",
       duration: "Aug 2022 – Present (expected 2026)",
-      gpa: "3.90/4.00",
+      gpa: "3.92/4.00",
       logo: "https://e7.pngegg.com/pngimages/358/597/png-clipart-mercu-buana-university-of-yogyakarta-master-s-degree-bachelor-s-degree-computer-engineering-miscellaneous-class-thumbnail.png",
       activities: [
         "Awardee of OSC 2021 Full Scholarship",
@@ -201,11 +201,11 @@ const handleViewDetails = (experienceId) => {
     case 2: //ciamic
       router.push('/projects/ciamic');
       break;
-    case 3: //digimate
-      router.push('/projects/digimate');
+    case 3: //danasense
+      router.push('/projects/danasense');
       break;
-    case 4: //eyecon
-      router.push('/projects/eyecon');
+    case 4: //digimate
+      router.push('/projects/digimate');
       break;
     default:
       console.log('Projects detail page not found');

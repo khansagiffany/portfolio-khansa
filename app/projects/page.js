@@ -6,69 +6,80 @@ import Image from 'next/image';
 const ProjectsPage = () => {
   const router = useRouter();
 
-  const projects = [
-    {
-      id: 1,
-      title: "Heron - Warehouse Management System",
-      description: "A centralized Warehouse Management System designed to streamline the entire supply chain. Replaces manual guesswork with system-driven workflows, giving real-time visibility and control over warehouse operations. Serving 3K+ active users with 100% uptime.",
-      image: "/img/Heron0.jpg",
-      technologies: ["Product Manager"],
-      github: null,
-      demo: "https://heron-wms.com",
-      year: "2026"
-    },
-    {
-      id: 2,
-      title: "CIAMIC - Chat Intelligent Assistant for Media Interaction & Communication",
-      description: "AI-powered chatbot for TelkomGroup employees to access internal product information, HR resources, KPIs, and secure company data. Improved adoption by 64% through user research and continuous iteration. Built for both desktop and mobile with responsive design.",
-      image: "/img/ciamic.png",
-      technologies: ["React.js", "Laravel", "MongoDB"],
-      github: "https://github.com/khansagiffany/ciamic",
-      demo: "https://ciamic-trf.itdri.id/",
-      year: "2025"
-    },
-    {
-      id: 3,
-      title: "Digimate - Personal Tracker for Interns",
-      description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management. It also provides progress tracking to help interns stay motivated and organized throughout their journey.",
-      image: "/img/digimate.jpg",
-      technologies: ["Next.js", "Tailwind", "Gemini"],
-      github: "https://github.com/khansagiffany/digimate-v2",
-      demo: "https://digimate-v2.vercel.app",
-      year: "2025"
-    },
-    {
-      id: 4,
-      title: "EYECON - Eye Health Mobile App",
-      description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
-      image: "/img/eyecon.jpg",
-      technologies: ["Kotlin", "Android Studio", "ML"],
-      github: "https://github.com/EYECON-Capstone",
-      demo: "https://eyecon-demo.com",
-      year: "2024"
-    },
-    {
-      id: 5,
-      title: "CrimsonDash Sales Dashboard",
-      description: "Comprehensive sales analytics for 2022-2024 with advanced filtering, interactive charts, and year-over-year growth insights.",
-      image: "/img/CrimsonDashmain.png",
-      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Recharts", "Data Visualization", "Analytics"],
-      github: "https://github.com/khansagiffany/CrimsonDash",
-      demo: "https://crimson-dash.vercel.app/",
-      year: "2025"
-    }
-  ];
+ const projects = [
+  {
+    id: 1,
+    title: "Heron - Warehouse Management System",
+    description: "A centralized Warehouse Management System designed to streamline the entire supply chain. Replaces manual guesswork with system-driven workflows, giving real-time visibility and control over warehouse operations. Serving 3K+ active users with 100% uptime.",
+    image: "/img/Heron0.jpg",
+    technologies: ["Product Manager"],
+    github: null,
+    demo: "https://heron-wms.com",
+    year: "2026"
+  },
+  {
+    id: 2,
+    title: "CIAMIC - Chat Intelligent Assistant for Media Interaction & Communication",
+    description: "AI-powered chatbot for TelkomGroup employees to access internal product information, HR resources, KPIs, and secure company data. Improved adoption by 64% through user research and continuous iteration. Built for both desktop and mobile with responsive design.",
+    image: "/img/ciamic.png",
+    technologies: ["React.js", "Laravel", "MongoDB"],
+    github: "https://github.com/khansagiffany/ciamic",
+    demo: "https://ciamic-trf.itdri.id/",
+    year: "2025"
+  },
+  {
+    id: 3,
+    title: "DANA Sense - The Invisible Insight Engine",
+    description: "An intelligent, contextual, and invisible in-app analytics engine for DANA. Transforms how DANA listens to users through event-triggered micro-surveys, AI-powered auto-synthesis, and a real-time stakeholder dashboard — reducing time-to-insight from 3 weeks to under 24 hours.",
+    image: "/img/danasense.jpg",
+    technologies: ["Apache Kafka", "NLP / AI Engine", "Microservices", "Data Warehouse"],
+    github: null,
+    demo: null,
+    year: "2025"
+  },
+  {
+    id: 4,
+    title: "Digimate - Personal Tracker for Interns",
+    description: "Web-based personal tracker designed for interns, featuring task reminders, an AI chatbot for internship-related questions, and a calendar schedule for better time management. It also provides progress tracking to help interns stay motivated and organized throughout their journey.",
+    image: "/img/digimate.jpg",
+    technologies: ["Next.js", "Tailwind", "Gemini"],
+    github: "https://github.com/khansagiffany/digimate-v2",
+    demo: "https://digimate-v2.vercel.app",
+    year: "2025"
+  },
+  {
+    id: 5,
+    title: "EYECON - Eye Health Mobile App",
+    description: "Android application for early detection of eye diseases using machine learning. Features real-time image processing, health recommendations, and integration with a machine learning model for accurate analysis.",
+    image: "/img/eyecon.jpg",
+    technologies: ["Kotlin", "Android Studio", "ML"],
+    github: "https://github.com/EYECON-Capstone",
+    demo: "https://eyecon-demo.com",
+    year: "2024"
+  },
+  {
+    id: 6,
+    title: "CrimsonDash Sales Dashboard",
+    description: "Comprehensive sales analytics for 2022-2024 with advanced filtering, interactive charts, and year-over-year growth insights.",
+    image: "/img/CrimsonDashmain.png",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Recharts", "Data Visualization", "Analytics"],
+    github: "https://github.com/khansagiffany/CrimsonDash",
+    demo: "https://crimson-dash.vercel.app/",
+    year: "2025"
+  }
+];
 
-  const handleViewProject = (projectId) => {
-    switch (projectId) {
-      case 1: router.push('/projects/heron'); break;
-      case 2: router.push('/projects/ciamic'); break;
-      case 3: router.push('/projects/digimate'); break;
-      case 4: router.push('/projects/eyecon'); break;
-      case 5: router.push('/projects/crimson'); break;
-      default: console.log('Projects detail page not found');
-    }
-  };
+const handleViewProject = (projectId) => {
+  switch (projectId) {
+    case 1: router.push('/projects/heron'); break;
+    case 2: router.push('/projects/ciamic'); break;
+    case 3: router.push('/projects/danasense'); break;
+    case 4: router.push('/projects/digimate'); break;
+    case 5: router.push('/projects/eyecon'); break;
+    case 6: router.push('/projects/crimson'); break;
+    default: console.log('Projects detail page not found');
+  }
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
