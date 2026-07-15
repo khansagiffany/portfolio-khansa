@@ -28,10 +28,10 @@ const experiences = [
   {
     id: 1,
     company: "Cermati Fintech Group",
-    position: "Product Manager",
+    position: "Product",
     duration: "May 2026 - Present",
     location: "Plaza Bank Index, Jakarta",
-    description: "Worked as a full-time Product Manager, supporting end-to-end product development within the fast paced fintech ecosystem, contributing to feature discovery, requirement gathering, and cross-functional alignment. Collaborated with engineering and design teams to define user stories, track sprint progress, and ensure product delivery aligned with business objectives.",
+    description: "Supporting product development within the fast paced fintech ecosystem, contributing to feature discovery, requirement gathering, and cross-functional alignment. Collaborated with engineering and design teams to define user stories, track sprint progress, and ensure product delivery aligned with business objectives.",
     skills: ["Product Discovery", "User Stories", "Agile", "Fintech"],
     logo: "img/cermatilogo.jpg"
   },
