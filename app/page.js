@@ -154,6 +154,21 @@ const projects = [
     { id: 3, title: "Project Management", issuer: "Komdigi", year: "2026", image: "/img/AI.jpeg" },
   ];
 
+  const articles = [
+  {
+    id: 1,
+    title: "How My First Internship Changed Me, Personally and Professionally.",
+    image: "/img/dtelkom.jpeg",
+    url: "/articles/telkom-internship"
+  },
+  {
+    id: 2,
+    title: "I Didn’t Expect My Product Journey to Start in a Warehouse.",
+    image: "/img/dparagon.jpeg",
+    url: "/articles/paragon-internship"
+  },
+];
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
@@ -227,6 +242,7 @@ const handleViewDetails = (experienceId) => {
               <button onClick={() => scrollToSection('projects')} className="text-stone-700 hover:text-[#800000] transition-colors">Projects</button>
               <button onClick={() => scrollToSection('education')} className="text-stone-700 hover:text-[#800000] transition-colors">Education</button>
               <button onClick={() => scrollToSection('certificates')} className="text-stone-700 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('articles')} className="text-stone-700 hover:text-[#800000] transition-colors">Articles</button>
               <button onClick={() => scrollToSection('contact')} className="text-stone-700 hover:text-[#800000] transition-colors">Contact</button>
             </div>
 
@@ -247,6 +263,7 @@ const handleViewDetails = (experienceId) => {
               <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Projects</button>
               <button onClick={() => scrollToSection('education')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Education</button>
               <button onClick={() => scrollToSection('certificates')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Certificates</button>
+              <button onClick={() => scrollToSection('articles')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Articles</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-stone-700 hover:text-[#800000] transition-colors">Contact</button>
             </div>
           )}
@@ -335,14 +352,14 @@ const handleViewDetails = (experienceId) => {
                 <span>{profile.location}</span>
               </div>
 
-              {/* CTA Buttons NEW*/}
+              {/* CTA Buttons NEW */}
             <div className="flex flex-row flex-wrap items-center gap-3 justify-start sm:justify-start">
-              <a 
+              {/* <a 
                 href={profile.resume}
                 className="flex items-center justify-center bg-gradient-to-r from-[#800000] to-rose-700 text-white px-6 h-12 rounded-xl font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-[#800000]/50 hover:scale-105 overflow-hidden border border-white/20 text-sm shadow-lg"
               >
                 <span className="relative z-10">khansAI (Currently Unavailable)</span>
-              </a>
+              </a> */}
               
               <button 
                 onClick={() => scrollToSection('contact')}
@@ -431,22 +448,24 @@ const handleViewDetails = (experienceId) => {
                     },
 { 
                       category: "Frontend", 
-                      skills: ["React.js", "TypeScript", "Tailwind CSS", "Bootstrap", "Flutter"],
+                      // skills: ["React.js", "TypeScript", "Tailwind CSS", "Bootstrap", "Flutter"],
+                      skills: ["React.js"],
                       gradient: "from-blue-500 to-cyan-500"
                     },
                     { 
                       category: "Backend", 
-                      skills: ["Node.js", "Laravel", "PHP", "MySQL", "MongoDB"],
+                      skills: ["Laravel"],
+                      // skills: ["Node.js", "Laravel", "PHP", "MySQL", "MongoDB"],
                       gradient: "from-green-500 to-emerald-500"
                     },
-                    { 
-                      category: "Programming & Data", 
-                      skills: ["Python", "R", "C++", "Java", "SQL"],
-                      gradient: "from-purple-500 to-pink-500"
-                    },
+                    // { 
+                    //   category: "Programming & Data", 
+                    //   skills: ["Python", "R", "C++", "Java", "SQL"],
+                    //   gradient: "from-purple-500 to-pink-500"
+                    // },
                     { 
                       category: "Tools & Platforms", 
-                      skills: ["Git", "Docker", "VS Code", "Figma", "Microsoft Office"],
+                      skills: ["Git","VS Code", "Figma", "Microsoft Office"],
                       gradient: "from-orange-500 to-red-500"
                     }
                   ].map((skillGroup, index) => (
@@ -847,6 +866,56 @@ const handleViewDetails = (experienceId) => {
                 </svg>
               </button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section id="articles" className="py-16 px-6 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-rose-50 -z-10"></div>
+        <div className="absolute top-20 left-0 w-72 h-72 bg-[#800000]/15 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-0 w-96 h-96 bg-rose-300/25 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Header with Glass */}
+          <div className="text-center mb-12">
+            <div className="inline-block bg-white/50 backdrop-blur-2xl px-8 py-6 rounded-3xl border border-white/70 shadow-2xl hover:scale-105 transition-transform">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-[#800000] via-rose-600 to-[#800000] bg-clip-text">
+                Articles
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#800000] to-rose-700 mx-auto mt-4 rounded-full"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {articles.map((article) => (
+              <Link
+                key={article.id}
+                href={article.url}
+                className="group relative bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] block"
+              >
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+
+                {/* Preview Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#800000]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                {/* Title */}
+                <div className="p-5 bg-white/30 backdrop-blur-md">
+                  <h3 className="font-bold text-lg text-stone-800 line-clamp-2 group-hover:text-[#800000] transition-colors">
+                    {article.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
