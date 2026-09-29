@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
-import { ChevronDown, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download, Code, Eye } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { ChevronDown, ChevronLeft, ChevronRight, MapPin, Mail, Phone, Linkedin, Github, ExternalLink, Calendar, Award, GraduationCap, Briefcase, Download, Code, Eye } from 'lucide-react';
 import { ReactTyped } from "react-typed";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const articlesRef = useRef(null);
   const router = useRouter();
 
   // Sample data - nanti bisa dipindah ke src/data/
@@ -172,6 +173,12 @@ const projects = [
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  const scrollArticles = (direction) => {
+    const el = articlesRef.current;
+    if (!el) return;
+    el.scrollBy({ left: direction * el.clientWidth, behavior: 'smooth' });
   };
 
 
@@ -888,34 +895,67 @@ const handleViewDetails = (experienceId) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {articles.map((article) => (
-              <Link
-                key={article.id}
-                href={article.url}
-                className="group relative bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] block"
-              >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#800000]/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+          {/* Carousel wrapper */}
+          <div className="relative max-w-3xl mx-auto">
+            {/* Prev / Next (hanya muncul kalau artikel > 2) */}
+            {articles.length > 2 && (
+              <>
+                <button
+                  onClick={() => scrollArticles(-1)}
+                  aria-label="Previous articles"
+                  className="hidden sm:flex absolute -left-12 top-1/3 z-10 w-10 h-10 items-center justify-center bg-white/70 backdrop-blur-xl rounded-full border border-white/70 shadow-lg text-[#800000] hover:scale-110 transition-transform"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => scrollArticles(1)}
+                  aria-label="Next articles"
+                  className="hidden sm:flex absolute -right-12 top-1/3 z-10 w-10 h-10 items-center justify-center bg-white/70 backdrop-blur-xl rounded-full border border-white/70 shadow-lg text-[#800000] hover:scale-110 transition-transform"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </>
+            )}
 
-                {/* Preview Image */}
-                <div className="relative overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#800000]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+            {/* Slider: 2 kartu per layar, sisanya geser ke samping */}
+            <div
+              ref={articlesRef}
+              className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {articles.map((article) => (
+                <div
+                  key={article.id}
+                  className="group relative snap-start shrink-0 basis-[calc(50%-0.5rem)] bg-white/40 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl border border-white/70 hover:shadow-2xl transition-all duration-300 flex flex-col"
+                >
+                  {/* Image holder 16:9 */}
+                  <div className="relative overflow-hidden aspect-video">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-                {/* Title */}
-                <div className="p-5 bg-white/30 backdrop-blur-md">
-                  <h3 className="font-bold text-lg text-stone-800 line-clamp-2 group-hover:text-[#800000] transition-colors">
-                    {article.title}
-                  </h3>
+                  {/* Content */}
+                  <div className="p-3 sm:p-4 bg-white/30 backdrop-blur-md flex flex-col flex-grow gap-2">
+                    <h3 className="font-bold text-sm sm:text-base text-stone-800 line-clamp-3 group-hover:text-[#800000] transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-stone-500">Read the full story here</p>
+
+                    <Link
+                      href={article.url}
+                      className="mt-auto inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#800000] to-rose-700 hover:from-rose-700 hover:to-[#800000] text-white px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl border border-white/30 self-start"
+                    >
+                      <span>Read Article</span>
+                      <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
