@@ -3,62 +3,80 @@
 
   <url>
     <loc>https://portfolio-khansa.vercel.app/</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
 
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/experiences/cermati</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/experiences/paragon</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
   <url>
     <loc>https://portfolio-khansa.vercel.app/experiences/telkom</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
-
   <url>
     <loc>https://portfolio-khansa.vercel.app/experiences/bangkit</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
-
   <url>
     <loc>https://portfolio-khansa.vercel.app/experiences/artha-nusa</loc>
-    <lastmod>2025-09-26</lastmod>
-  </url>
-
-  <url>
-    <loc>https://portfolio-khansa.vercel.app/projects/ciamic</loc>
-    <lastmod>2025-09-26</lastmod>
-  </url>
-
-  <url>
-    <loc>https://portfolio-khansa.vercel.app/projects/digimate</loc>
-    <lastmod>2025-09-26</lastmod>
-  </url>
-
-  <url>
-    <loc>https://portfolio-khansa.vercel.app/projects/eyecon</loc>
-    <lastmod>2025-09-26</lastmod>
-  </url>
-
-  <url>
-    <loc>https://portfolio-khansa.vercel.app/projects/crimson</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
 
   <url>
     <loc>https://portfolio-khansa.vercel.app/projects</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/heron</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/ciamic</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/danasense</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/digimate</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/eyecon</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/projects/crimson</loc>
+    <lastmod>2026-09-29</lastmod>
   </url>
 
   <url>
     <loc>https://portfolio-khansa.vercel.app/education/umb</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
-
   <url>
     <loc>https://portfolio-khansa.vercel.app/education/ub</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
 
   <url>
     <loc>https://portfolio-khansa.vercel.app/certificates</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/articles/telkom-internship</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://portfolio-khansa.vercel.app/articles/paragon-internship</loc>
+    <lastmod>2026-09-29</lastmod>
   </url>
 
 </urlset>
